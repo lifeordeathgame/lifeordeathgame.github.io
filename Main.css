@@ -1,26 +1,32 @@
 img {
-position: absolute; 
+  position: absolute; 
 }
 a {
-color: hotpink;
+  color: hotpink;
 }
 .button {
-background-color: #FFF938;
-border: 2px solid black;
-color: black;
-padding: 15px 32px;
-text-align: center;
-display: inline-block;
-font-size: 16px;
-margin: 4px 2px;
-cursor: pointer;
-position: absolute; 
-top:  20px; 
-left:  1170px;
+  background-color: #FFF938;
+  border: 2px solid black;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: absolute; 
+  top:  20px; 
+  left:  1170px;
 }
 .Q1pic {
-TOP: 35px; 
-LEFT: 490px; 
-WIDTH: 370px; 
-HEIGHT: 500px
+  TOP: 35px; 
+  LEFT: 490px; 
+  WIDTH: 370px; 
+  HEIGHT: 500px
+}
+.Q7pic {
+  TOP: 235px; 
+  LEFT: 430px; 
+  WIDTH: 580px; 
+  HEIGHT: 272px
 }

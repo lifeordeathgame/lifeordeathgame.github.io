@@ -1,3 +1,6 @@
+img {
+position: absolute; 
+}
 a {
 color: hotpink;
 }
@@ -14,4 +17,10 @@ cursor: pointer;
 position: absolute; 
 top:  20px; 
 left:  1170px;
+}
+.Q1pic {
+TOP: 35px; 
+LEFT: 490px; 
+WIDTH: 370px; 
+HEIGHT: 500px
 }

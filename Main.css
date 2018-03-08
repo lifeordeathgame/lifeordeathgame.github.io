@@ -4,9 +4,9 @@ a {
 .button {
   display: inline-block;
   border-radius: 4px;
-  background-color: #f4511e;
+  background-color: #cc0000;
   border: none;
-  color: #cc0000;
+  color: #ffffff;
   text-align: center;
   font-size: 28px;
   padding: 20px;
@@ -17,6 +17,7 @@ a {
   position: absolute; 
   top:  20px; 
   left:  1020px;
+  text-shadow: 2px 2px #000000;
 }
 .button span {
   cursor: pointer;

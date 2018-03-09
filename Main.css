@@ -3,7 +3,7 @@ a {
 }
 html
 {
-  cursor:url(https://juliannkquiz.github.io/cursor.png), auto;
+  cursor: url(foo.cur), url(https://juliannkquiz.github.io/cursor.png), auto;
 }
 .button {
   display: inline-block;

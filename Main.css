@@ -3,7 +3,7 @@ a {
 }
 html
 {
-  cursor: url(foo.cur), url(CURSOR.gif), auto;
+  cursor: url(CURSOR.gif), auto;
 }
 .button {
   display: inline-block;

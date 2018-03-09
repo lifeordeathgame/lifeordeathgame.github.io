@@ -47,7 +47,7 @@ html
   opacity: 1;
   right: 0;
 }
-.buttonindex1 {
+.btn-group .buttonindex1 {
   display: inline-block;
   border-radius: 4px;
   background-color: #cc0000;
@@ -65,14 +65,14 @@ html
   left:  100px;
   text-shadow: 2px 2px #000000;
 }
-.buttonindex1 span {
+.btn-group .buttonindex1 span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.buttonindex1 span:after {
+.btn-group .buttonindex1 span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -81,15 +81,15 @@ html
   transition: 0.5s;
 }
 
-.buttonindex1:hover span {
+.btn-group .buttonindex1:hover span {
   padding-right: 25px;
 }
 
-.buttonindex1:hover span:after {
+.btn-group .buttonindex1:hover span:after {
   opacity: 1;
   right: 0;
 }
-.buttonindex2 {
+.btn-group .buttonindex2 {
   display: inline-block;
   border-radius: 4px;
   background-color: #006699;
@@ -107,14 +107,14 @@ html
   left:  900px;
   text-shadow: 2px 2px #000000;
 }
-.buttonindex2 span {
+.btn-group .buttonindex2 span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.buttonindex2 span:after {
+.btn-group .buttonindex2 span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -123,11 +123,11 @@ html
   transition: 0.5s;
 }
 
-.buttonindex2:hover span {
+.btn-group .buttonindex2:hover span {
   padding-right: 25px;
 }
 
-.buttonindex2:hover span:after {
+.btn-group .buttonindex2:hover span:after {
   opacity: 1;
   right: 0;
 }

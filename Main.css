@@ -3,7 +3,7 @@ a {
 }
 html
 {
-cursor: s.png;
+cursor: url('s.png');
 }
 .button {
   display: inline-block;

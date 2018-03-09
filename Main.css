@@ -1,6 +1,10 @@
 a {
   color: hotpink;
 }
+html
+{
+cursor: s.png;
+}
 .button {
   display: inline-block;
   border-radius: 4px;

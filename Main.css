@@ -3,7 +3,7 @@ a {
 }
 html
 {
-  cursor: url(CURSOR.gif), auto;
+  cursor: url(http://www.javascriptkit.com/dhtmltutors/cursor-hand.gif), auto;
 }
 .button {
   display: inline-block;

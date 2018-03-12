@@ -11,7 +11,7 @@ html
   margin: auto;
   font-family: 'Josefin Slab', serif;
   font-weight: bold;
-  font-size: 80px;
+  font-size: 65px;
 }
 .title2 {
   text-shadow: 2px 2px 4px #999;
@@ -19,7 +19,7 @@ html
   margin: auto;
   font-family: 'Josefin Slab', serif;
   font-weight: bold;
-  font-size: 120px;
+  font-size: 140px;
 }
 .button {
   display: inline-block;

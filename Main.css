@@ -5,12 +5,11 @@ a {
   background-color: #23281f;
   border: none;
   text-align: center;
-  padding: 20px;
-  width: 50px;
+  padding: 10px;
   cursor: pointer;
   margin: 5px;
   position: absolute; 
-  text-shadow: 2px 2px #000000;
+
 }
 html
 {

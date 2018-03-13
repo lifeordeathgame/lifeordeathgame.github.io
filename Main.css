@@ -1,13 +1,12 @@
 a {
-  color: hotpink;
-  display: inline-block;
-  border-radius: 0px;
+   color: whitesmoke;
+  border-radius: 2px;
   background-color: #23281f;
   border: none;
   text-align: center;
   padding: 5px;
   cursor: pointer;
-  margin: 0px;
+  margin: px;
   position: absolute; 
 
 }

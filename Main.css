@@ -1,5 +1,16 @@
 a {
   color: hotpink;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: none;
+  text-align: center;
+  padding: 20px;
+  width: 50px;
+  cursor: pointer;
+  margin: 5px;
+  position: absolute; 
+  text-shadow: 2px 2px #000000;
 }
 html
 {

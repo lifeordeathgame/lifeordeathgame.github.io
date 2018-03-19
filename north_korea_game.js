@@ -16,11 +16,11 @@ var myGameArea = {
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
-        window.addEventListener('keydown', function (space) {
-            myGameArea.key = space.keyCode;
+        window.addEventListener('keydown', function (e) {
+            myGameArea.key = e.keyCode;
             moveup();
         })
-        window.addEventListener('keyup', function (space) {
+        window.addEventListener('keyup', function (e) {
             myGameArea.key = false;
         })
         },

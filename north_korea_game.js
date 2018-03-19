@@ -16,6 +16,13 @@ var myGameArea = {
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
+        window.addEventListener('keydown', function (space) {
+            myGameArea.key = space.keyCode;
+            moveup();
+        })
+        window.addEventListener('keyup', function (space) {
+            myGameArea.key = false;
+        })
         },
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -28,6 +35,8 @@ var myGameArea = {
 function component(width, height, color, x, y) {
     this.width = width;
     this.height = height;
+    this.gravity = 0.05;
+    this.gravitySpeed = 0;
     this.speedX = 0;
     this.speedY = 0;    
     this.x = x;
@@ -38,9 +47,18 @@ function component(width, height, color, x, y) {
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
     this.newPos = function() {
+        this.gravitySpeed += this.gravity;
         this.x += this.speedX;
-        this.y += this.speedY;        
+        this.y += this.speedY + this.gravitySpeed;   
+        this.hitBottom();
     }    
+    this.hitBottom = function() {
+        var rockbottom = myGameArea.canvas.height - this.height;
+        if (this.y > rockbottom) {
+            this.y = rockbottom;
+            }
+    }
+
     this.crashWith = function(otherobj) {
         var myleft = this.x;
         var myright = this.x + (this.width);

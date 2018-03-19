@@ -101,7 +101,6 @@ function updateGameArea() {
     myGamePiece.newPos();    
     myGamePiece.update();
 }
-}
 
 function everyinterval(n) {
     if ((myGameArea.frameNo / n) % 1 == 0) {return true;}

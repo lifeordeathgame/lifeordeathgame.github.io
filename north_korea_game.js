@@ -77,7 +77,7 @@ function updateGameArea() {
             myGameArea.stop();
             return;
         } 
-    }
+    }   
     myGameArea.clear();
     myGameArea.frameNo += 1;
     if (myGameArea.frameNo == 1 || everyinterval(150)) {
@@ -89,7 +89,7 @@ function updateGameArea() {
         myObstacles[i].x += -1;
         myObstacles[i].update();
     }
-    myGameArea.clear();
+
     myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;    
     if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX = -1; }

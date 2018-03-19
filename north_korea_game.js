@@ -68,8 +68,10 @@ function component(width, height, color, x, y) {
         return crash;
     }
 }
-function obsatcles() {
-    var x, y;
+
+
+function updateGameArea() {
+        var x, y;
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
             myGameArea.stop();
@@ -87,10 +89,6 @@ function obsatcles() {
         myObstacles[i].x += -1;
         myObstacles[i].update();
     }
-}
-
-function updateGameArea() {
-    obstacles();
     myGameArea.clear();
     myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;    

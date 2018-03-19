@@ -3,7 +3,7 @@ var myGamePiece;
 var myObstacles = [];
 
 function startGame() {
-    myGamePiece = new component(30, 30, "red", 2, 268);
+    myGamePiece = new component(30, 30, "red", 2, 238);
     myGameArea.start();
 }
 
@@ -70,7 +70,7 @@ function updateGameArea() {
     myGameArea.frameNo += 1;
     if (myGameArea.frameNo == 1 || everyinterval(150)) {
         x = myGameArea.canvas.width;
-        y = myGameArea.canvas.height - 200;
+        y = myGameArea.canvas.height - 20;
         myObstacles.push(new component(15, 5, "yellow", x, y));
     }
     for (i = 0; i < myObstacles.length; i += 1) {

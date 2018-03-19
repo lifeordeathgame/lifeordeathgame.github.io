@@ -68,8 +68,7 @@ function component(width, height, color, x, y) {
         return crash;
     }
 }
-
-function updateGameArea() {
+function obsatcles() {
     var x, y;
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
@@ -88,6 +87,11 @@ function updateGameArea() {
         myObstacles[i].x += -1;
         myObstacles[i].update();
     }
+}
+
+function updateGameArea() {
+    obstacles();
+    myGameArea.clear();
     myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;    
     if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX = -1; }
@@ -96,6 +100,7 @@ function updateGameArea() {
     if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY = 1; }
     myGamePiece.newPos();    
     myGamePiece.update();
+}
 }
 
 function everyinterval(n) {

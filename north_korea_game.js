@@ -41,7 +41,7 @@ function component(width, height, color, x, y, type) {
     this.y = y; 
     this.gravity = 0.05;
     this.gravitySpeed = 0;
-    this.sp = 4;
+    this.sp = 16;
     this.jumpokay = false;
     this.update = function() {
         ctx = myGameArea.context;
@@ -120,7 +120,7 @@ function updateGameArea() {
     }
 
     for (i = 0; i < myObstacles.length; i += 1) {
-        myObstacles[i].x += - myGamePiece.sp * 2;
+        myObstacles[i].x += - myGamePiece.sp;
         myObstacles[i].update();
     }
     score = myGameArea.frameNo / 5

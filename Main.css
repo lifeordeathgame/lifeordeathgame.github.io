@@ -132,7 +132,7 @@ canvas {
   cursor: pointer;
   margin: 5px;
   position: absolute; 
-  top:  588px; 
+  top:  558px; 
   left:  510px;
   text-shadow: 2px 2px #000000;
 }
@@ -157,6 +157,48 @@ canvas {
 }
 
 .buttonindex2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.buttonindex3 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: 	#CCCC00;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  position: absolute; 
+  top:  508px; 
+  left:  510px;
+  text-shadow: 2px 2px #000000;
+}
+.buttonindex3 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonindex3 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonindex3:hover span {
+  padding-right: 25px;
+}
+
+.buttonindex3:hover span:after {
   opacity: 1;
   right: 0;
 }

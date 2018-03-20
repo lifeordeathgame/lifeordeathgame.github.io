@@ -3,7 +3,7 @@ var myObstacles = [];
 var myScore;
 
 function startGame() {
-    myGamePiece = new component(15, 30, "red", 10, 120);
+    myGamePiece = new component(15, 30, "Kim.png", 10, 120, "image");
     myScore = new component("30px", "Consolas", "black", 20, 20, "text");
 
     myGameArea.start();

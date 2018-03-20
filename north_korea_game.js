@@ -129,10 +129,3 @@ function clearmove() {
     myGamePiece.speedY = 0; 
 }
 
-<div style="text-align:center;width:480px;">
-  <button onmousedown="accelerate(-7)" onmouseup="accelerate(-7)" ontouchstart="moveup()">UP</button><br><br>
-
-  
-<p>Here comes a new obstacle at every 150. frame, and we have 50 frames per second, so one obstacle every third second!</p>
-
-

@@ -41,7 +41,7 @@ function component(width, height, color, x, y, type) {
     this.y = y; 
     this.gravity = 0.05;
     this.gravitySpeed = 0;
-    this.sp = 2;
+    this.sp = 4;
     this.jumpokay = false;
     this.update = function() {
         ctx = myGameArea.context;

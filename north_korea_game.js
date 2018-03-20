@@ -4,7 +4,7 @@ var myScore;
 
 function startGame() {
     myGamePiece = new component(90, 90, "Kim.png", 90, 10, "image");
-    myScore = new component("30px", "Consolas", "black", 20, 20, "text");
+    myScore = new component("30px", "Consolas", "black", 50, 50, "text");
 
     myGameArea.start();
 }
@@ -112,7 +112,7 @@ function updateGameArea() {
     myGameArea.clear();
     myGameArea.frameNo += 1;
     z = 200;
-    z += -10;
+    z += -50;
     if (myGameArea.frameNo == 1 || everyinterval(z)) {
         x = myGameArea.canvas.width;
         y = myGameArea.canvas.height - 60;

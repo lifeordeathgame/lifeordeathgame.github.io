@@ -1,8 +1,11 @@
 var myGamePiece;
 var myObstacles = [];
+var myScore;
 
 function startGame() {
-    myGamePiece = new component(30, 30, "red", 10, 120);
+    myGamePiece = new component(15, 30, "red", 10, 120);
+    myScore = new component("30px", "Consolas", "black", 20, 20, "text");
+
     myGameArea.start();
 }
 
@@ -24,21 +27,30 @@ var myGameArea = {
     }    
 }
 
-function component(width, height, color, x, y) {
+function component(width, height, color, x, y, type) {
     this.width = width;
     this.height = height;
     this.speedX = 0;
     this.speedY = 0;    
     this.x = x;
+    this.type = type;
     this.y = y; 
     this.gravity = 0.05;
     this.gravitySpeed = 0;
     this.sp = 2;
+    this.jumpokay = false;
     this.update = function() {
         ctx = myGameArea.context;
-        ctx.fillStyle = color;
-        ctx.fillRect(this.x, this.y, this.width, this.height);
-    }
+        if (this.type == "text") {
+      		ctx.font = this.width + " " + this.height;
+      		ctx.fillStyle = color;
+      		ctx.fillText(this.text, this.x, this.y);
+   		} 
+    	else {
+        	ctx.fillStyle = color;
+        	ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+      }
     this.newPos = function() {
     	this.sp += 0.005
     	if (this.gravitySpeed < 0){
@@ -55,8 +67,10 @@ function component(width, height, color, x, y) {
     
     this.hitBottom = function() {
         var rockbottom = myGameArea.canvas.height - this.height;
+        
         if (this.y > rockbottom) {
             this.y = rockbottom;
+            
         }
     }
     
@@ -78,7 +92,7 @@ function component(width, height, color, x, y) {
 }
 
 function updateGameArea() {
-    var x, y;
+    var x, y, z, score;
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
             myGameArea.stop();
@@ -87,18 +101,37 @@ function updateGameArea() {
     }
     myGameArea.clear();
     myGameArea.frameNo += 1;
-    if (myGameArea.frameNo == 1 || everyinterval(90) += my) {
+    z = 90;
+    z += -10;
+    if (myGameArea.frameNo == 1 || everyinterval(z)) {
         x = myGameArea.canvas.width;
         y = myGameArea.canvas.height - 20;
-        myObstacles.push(new component(20, 5, "yellow", x, y));
+        myObstacles.push(new component(20, 5, "Kim.png", x, y, "image"));
     }
 
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += - myGamePiece.sp;
         myObstacles[i].update();
     }
+    score = myGameArea.frameNo / 5
+    myScore.text="SCORE: " + score;
+    myScore.update();
     myGamePiece.newPos();    
     myGamePiece.update();
+}
+
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '38') {
+    	if (myGamePiece.y >= 230) {
+    		accelerate(-5)
+        	clearmove()
+        }
+    }
 }
 
 function everyinterval(n) {
@@ -128,4 +161,5 @@ function clearmove() {
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
 }
+document.write(myGamePiece.y);
 

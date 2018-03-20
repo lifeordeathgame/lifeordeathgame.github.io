@@ -111,11 +111,11 @@ function updateGameArea() {
     }
     myGameArea.clear();
     myGameArea.frameNo += 1;
-    z = 360;
+    z = 200;
     z += -10;
     if (myGameArea.frameNo == 1 || everyinterval(z)) {
         x = myGameArea.canvas.width;
-        y = myGameArea.canvas.height - 30;
+        y = myGameArea.canvas.height - 60;
         myObstacles.push(new component(60, 30, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", x, y, "image"));
     }
 
@@ -138,7 +138,7 @@ function checkKey(e) {
 
     if (e.keyCode == '38') {
     	if (myGamePiece.y >= 600) {
-    		accelerate(-3)
+    		accelerate(-7)
         	clearmove()
         }
     }

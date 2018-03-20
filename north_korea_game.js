@@ -4,7 +4,7 @@ var myScore;
 
 function startGame() {
     myGamePiece = new component(90, 90, "Kim.png", 90, 705, "image");
-    myScore = new component("30px", "Consolas", "black", 50, 50, "text");
+    myScore = new component("30px", "Consolas", "red", 50, 50, "text");
 
     myGameArea.start();
 }

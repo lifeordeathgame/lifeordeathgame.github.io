@@ -3,7 +3,7 @@ var myObstacles = [];
 var myScore;
 
 function startGame() {
-    myGamePiece = new component(30, 30, "Kim.png", 10, 120, "image");
+    myGamePiece = new component(90, 90, "Kim.png", 90, 10, "image");
     myScore = new component("30px", "Consolas", "black", 20, 20, "text");
 
     myGameArea.start();
@@ -116,7 +116,7 @@ function updateGameArea() {
     if (myGameArea.frameNo == 1 || everyinterval(z)) {
         x = myGameArea.canvas.width;
         y = myGameArea.canvas.height - 20;
-        myObstacles.push(new component(20, 10, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", x, y, "image"));
+        myObstacles.push(new component(60, 30, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", x, y, "image"));
     }
 
     for (i = 0; i < myObstacles.length; i += 1) {
@@ -137,8 +137,8 @@ function checkKey(e) {
     e = e || window.event;
 
     if (e.keyCode == '38') {
-    	if (myGamePiece.y >= 230) {
-    		accelerate(-5)
+    	if (myGamePiece.y <= 90) {
+    		accelerate(-15)
         	clearmove()
         }
     }

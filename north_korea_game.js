@@ -3,7 +3,7 @@ var myObstacles = [];
 var myScore;
 
 function startGame() {
-    myGamePiece = new component(90, 90, "Kim.png", 90, 705, "image");
+    myGamePiece = new component(90, 90, "Kim.png", 90, 655, "image");
     myScore = new component("30px", "Consolas", "red", 50, 50, "text");
 
     myGameArea.start();
@@ -13,7 +13,7 @@ var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
         this.canvas.width = 1280;
-        this.canvas.height = 720;
+        this.canvas.height = 670;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
@@ -137,7 +137,7 @@ function checkKey(e) {
     e = e || window.event;
 
     if (e.keyCode == '38') {
-    	if (myGamePiece.y >= 630) {
+    	if (myGamePiece.y >= 580) {
     		accelerate(-10)
         	clearmove()
         }

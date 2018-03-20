@@ -120,7 +120,7 @@ function updateGameArea() {
     }
 
     for (i = 0; i < myObstacles.length; i += 1) {
-        myObstacles[i].x += - myGamePiece.sp;
+        myObstacles[i].x += - myGamePiece.sp * 2;
         myObstacles[i].update();
     }
     score = myGameArea.frameNo / 5

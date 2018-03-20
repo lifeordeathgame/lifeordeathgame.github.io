@@ -116,7 +116,7 @@ function updateGameArea() {
     if (myGameArea.frameNo == 1 || everyinterval(z)) {
         x = myGameArea.canvas.width;
         y = myGameArea.canvas.height - 20;
-        myObstacles.push(new component(20, 5, "Kim.png", x, y, "image"));
+        myObstacles.push(new component(20, 5, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", x, y, "image"));
     }
 
     for (i = 0; i < myObstacles.length; i += 1) {

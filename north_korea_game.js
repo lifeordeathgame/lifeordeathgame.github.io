@@ -138,7 +138,7 @@ function checkKey(e) {
 
     if (e.keyCode == '38') {
     	if (myGamePiece.y >= 600) {
-    		accelerate(-7)
+    		accelerate(-10)
         	clearmove()
         }
     }

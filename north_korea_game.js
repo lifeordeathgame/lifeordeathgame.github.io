@@ -50,6 +50,12 @@ function component(width, height, color, x, y, type) {
       		ctx.fillStyle = color;
       		ctx.fillText(this.text, this.x, this.y);
    		} 
+	else if (type == "image") {
+      		ctx.drawImage(this.image, 
+        	this.x, 
+        	this.y,
+        	this.width, this.height);
+   	}
     	else {
         	ctx.fillStyle = color;
         	ctx.fillRect(this.x, this.y, this.width, this.height);

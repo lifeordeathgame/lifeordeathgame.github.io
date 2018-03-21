@@ -39,7 +39,7 @@ function component(width, height, color, x, y, type) {
     this.x = x;
     this.type = type;
     this.y = y; 
-    this.gravity = 0.05;
+    this.gravity = 0.1;
     this.gravitySpeed = 0;
     this.sp = 16;
     this.jumpokay = false;
@@ -117,7 +117,7 @@ function updateGameArea() {
     if (myGameArea.frameNo == 1 || everyinterval(z)) {
         x = myGameArea.canvas.width;
         y = myGameArea.canvas.height - 105;
-        myObstacles.push(new component(60, 60, "Kim.png", x, y, "image"));
+        myObstacles.push(new component(75, 75, "Kim.png", x, y, "image"));
     }
 
     for (i = 0; i < myObstacles.length; i += 1) {

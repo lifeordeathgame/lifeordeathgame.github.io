@@ -1,7 +1,7 @@
 var myGamePiece;
 var myObstacles = [];
 var myScore;
-var height
+var height;
 
 function startGame() {
     height = 90;

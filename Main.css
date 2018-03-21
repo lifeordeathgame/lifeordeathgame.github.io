@@ -135,8 +135,10 @@ canvas {
   margin: 5px;
   position: absolute; 
   top:  608px; 
-  left:  510px;
+  left:  50%;
   text-shadow: 2px 2px #000000;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
 }
 .buttonindex2 span {
   cursor: pointer;
@@ -177,8 +179,10 @@ canvas {
   margin: 5px;
   position: absolute; 
   top:  526px; 
-  left:  510px;
+  left:  50%;
   text-shadow: 2px 2px #000000;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
 }
 .buttonindex3 span {
   cursor: pointer;

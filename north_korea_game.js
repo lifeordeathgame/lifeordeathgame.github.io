@@ -149,7 +149,7 @@ function checkKey(e) {
         }
     }
     if (e.keyCode == '16') {
-        //myGamePiece.height(60);
+        myGamePiece.height(60);
 
     }
 }

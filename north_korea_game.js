@@ -1,9 +1,10 @@
 var myGamePiece;
 var myObstacles = [];
 var myScore;
+var merica = 90;
 
 function startGame() {
-    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, 655, "image");
+    myGamePiece = new component(180, merica, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, 655, "image");
     myScore = new component("30px", "Consolas", "red", 50, 50, "text");
 
     myGameArea.start();
@@ -145,6 +146,12 @@ function checkKey(e) {
     if (e.keyCode == '32') {
     	if (myGamePiece.y >= 550) {
     	    accelerate(-12)
+            clearmove()
+        }
+    }
+    if (e.keyCode == '16') {
+    	if (myGamePiece.y >= 550) {
+    	    merica = 60;
             clearmove()
         }
     }

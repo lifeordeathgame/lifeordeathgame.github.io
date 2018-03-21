@@ -137,6 +137,7 @@ function updateGameArea() {
 }
 
 document.onkeydown = checkKey;
+document.onkeyup = doneKey;
 
 function checkKey(e) {
 
@@ -150,6 +151,16 @@ function checkKey(e) {
     }
     if (e.keyCode == '16') {
         myGamePiece.height = 60;
+
+    }
+}
+
+function doneKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '16') {
+        myGamePiece.height = 90;
 
     }
 }

@@ -150,10 +150,10 @@ function checkKey(e) {
         }
     }
     if (e.keyCode == '16') {
-    	if (myGamePiece.y >= 550) {
-    	    merica = 60;
-            clearmove()
-        }
+    	
+    	merica = 60;
+            
+        
     }
 }
 
@@ -184,5 +184,5 @@ function clearmove() {
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
 }
-document.write(myGamePiece.y);
+
 

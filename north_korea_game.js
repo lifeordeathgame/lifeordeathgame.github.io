@@ -137,19 +137,11 @@ function checkKey(e) {
 
     e = e || window.event;
 
-    if (e.keyCode == '87') {
+    if (e.keyCode == '32') {
     	if (myGamePiece.y >= 460) {
     	    accelerate(-12)
             clearmove()
         }
-    }
-    if (e.keyCode == '65') {
-    	moveleft()
-        clearmove()
-    }
-    if (e.keyCode == '68') {
-    	moveright()
-        clearmove()
     }
 }
 

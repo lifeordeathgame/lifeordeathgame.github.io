@@ -130,7 +130,7 @@ function updateGameArea() {
         myObstacles[i].update();
     }
     score = myGameArea.frameNo / 5
-    myScore.text="SCORE: " + merica;
+    myScore.text="SCORE: " + myGamePiece.height;
     myScore.update();
     myGamePiece.newPos();    
     myGamePiece.update();

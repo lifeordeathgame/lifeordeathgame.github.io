@@ -151,7 +151,7 @@ function checkKey(e) {
         }
     }
     if (e.keyCode == '16') {
-        myGamePiece.y = 630;
+        height = 60;
 
     }
 }

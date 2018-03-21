@@ -138,7 +138,7 @@ function checkKey(e) {
     e = e || window.event;
 
     if (e.keyCode == '32') {
-    	if (myGamePiece.y >= 460) {
+    	if (myGamePiece.y >= 490) {
     	    accelerate(-12)
             clearmove()
         }

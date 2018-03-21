@@ -149,7 +149,7 @@ function checkKey(e) {
         }
     }
     if (e.keyCode == '16') {
-        myGamePiece.y = 520;
+        myGamePiece.y = 600;
 
     }
 }

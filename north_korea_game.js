@@ -3,7 +3,7 @@ var myObstacles = [];
 var myScore;
 
 function startGame() {
-    myGamePiece = new component(180, 180, "Kim.png", 90, 655, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, 655, "image");
     myScore = new component("30px", "Consolas", "red", 50, 50, "text");
 
     myGameArea.start();
@@ -117,7 +117,7 @@ function updateGameArea() {
     if (myGameArea.frameNo == 1 || everyinterval(z)) {
         x = myGameArea.canvas.width;
         y = myGameArea.canvas.height - 105;
-        myObstacles.push(new component(120, 60, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", x, y, "image"));
+        myObstacles.push(new component(60, 60, "Kim.png", x, y, "image"));
     }
 
     for (i = 0; i < myObstacles.length; i += 1) {

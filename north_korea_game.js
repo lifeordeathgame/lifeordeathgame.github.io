@@ -130,7 +130,7 @@ function updateGameArea() {
         myObstacles[i].update();
     }
     score = myGameArea.frameNo / 5
-    myScore.text="SCORE: " + myGamePiece.height;
+    myScore.text="SCORE: " + score;
     myScore.update();
     myGamePiece.newPos();    
     myGamePiece.update();
@@ -149,7 +149,7 @@ function checkKey(e) {
         }
     }
     if (e.keyCode == '16') {
-        myGamePiece.height(60);
+        //myGamePiece.height(60);
 
     }
 }

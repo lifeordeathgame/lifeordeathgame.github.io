@@ -1,7 +1,7 @@
 var myGamePiece;
 var myObstacles = [];
 var myScore;
-var merica = 60;
+var merica = 90;
 
 function startGame() {
     myGamePiece = new component(180, merica, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, 655, "image");

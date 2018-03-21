@@ -93,6 +93,8 @@ canvas {
   left:  50%;
   text-shadow: 2px 2px #000000;
   margin: 5px;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
 }
 .buttonindex1 span {
   cursor: pointer;

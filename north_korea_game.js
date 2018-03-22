@@ -1,7 +1,6 @@
 var myGamePiece;
 var myObstacles = [];
 var myScore;
-var score = 0;
 function startGame() {
     myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, 655, "image");
     myScore = new component("30px", "Consolas", "red", 50, 50, "text");
@@ -9,13 +8,6 @@ function startGame() {
     myGameArea.start();
 }
 
-function increment(n){
-
-  n ++;
-  return n;
-}
-
-score=increment(score);
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
@@ -109,7 +101,7 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
-    var x, y, z;
+    var x, y, z, score;
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
 	    
@@ -131,13 +123,14 @@ function updateGameArea() {
 			y = myGameArea.canvas.height - 145;
 		}
         	myObstacles.push(new component(75, 75, "Kim.png", x, y, "image"));
-	        increment(score);
+	        
 
     }
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += - myGamePiece.sp;
         myObstacles[i].update();
     }
+    score = (z / 5) / 12.6;
     myScore.text="SCORE: " + score;
     myScore.update();
     myGamePiece.newPos();    

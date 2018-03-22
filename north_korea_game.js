@@ -106,6 +106,7 @@ function updateGameArea() {
         if (myGamePiece.crashWith(myObstacles[i])) {
 	    
             myGameArea.stop();
+	    window.alert("You died! Refresh the page with the restart button or ctrl/cmd + r");
             return;
         } 
     }

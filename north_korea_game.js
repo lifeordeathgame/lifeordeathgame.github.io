@@ -153,8 +153,9 @@ function checkKey(e) {
         }
     }
     if (e.keyCode == '16') {
+	if (myGamePiece.y >= 550) {
         myGamePiece.height = 60;
-
+	}
     }
 }
 

@@ -123,14 +123,13 @@ function updateGameArea() {
 			y = myGameArea.canvas.height - 145;
 		}
         	myObstacles.push(new component(75, 75, "Kim.png", x, y, "image"));
-	        score += 16;
 
     }
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += - myGamePiece.sp;
         myObstacles[i].update();
     }
-    score = ((myGameArea.frameNo / 5) / 12.6);
+    score = ((myGameArea.frameNo / 129380948923));
     myScore.text="SCORE: " + score;
     myScore.update();
     myGamePiece.newPos();    
@@ -149,13 +148,14 @@ function checkKey(e) {
     if (e.keyCode == '32') {
     	if (myGamePiece.y >= 550) {
     	    accelerate(-12)
+	    score += 1;
             clearmove()
         }
     }
     if (e.keyCode == '16') {
-	if (myGamePiece.y >= 550) {
+	
         myGamePiece.height = 60;
-	}
+	
     }
 }
 

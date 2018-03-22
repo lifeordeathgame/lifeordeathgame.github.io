@@ -114,6 +114,7 @@ function updateGameArea() {
     myGameArea.frameNo += 1;
     z = 120;
     z += -50;
+    score = 0;
     if (myGameArea.frameNo == 1 || everyinterval(z)) {
 		var rannum = Math.floor((Math.random())* 10)+1;
         	x = myGameArea.canvas.width;
@@ -124,7 +125,7 @@ function updateGameArea() {
 			y = myGameArea.canvas.height - 145;
 		}
         	myObstacles.push(new component(75, 75, "Kim.png", x, y, "image"));
-	        score = 0;
+	        
 	        score += 1;
     }
     for (i = 0; i < myObstacles.length; i += 1) {

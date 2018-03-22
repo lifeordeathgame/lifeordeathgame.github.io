@@ -117,12 +117,17 @@ function updateGameArea() {
 		var rannum = Math.floor((Math.random())* 10)+1;
         	x = myGameArea.canvas.width;
 		if (rannum <= 7) {
-        	y = myGameArea.canvas.height - 105;
+        	    y = myGameArea.canvas.height - 105;
+		    myObstacles.push(new component(75, 75, "Kim.png", x, 105, "image"));
+		    myObstacles.push(new component(75, 75, "Kim.png", x, 185, "image"));
+
 		}
 		else {
-			y = myGameArea.canvas.height - 145;
+		    y = myGameArea.canvas.height - 145;
+		    myObstacles.push(new component(75, 75, "Kim.png", x, 145, "image"));
+		    myObstacles.push(new component(75, 75, "Kim.png", x, 105, "image"));
+
 		}
-        	myObstacles.push(new component(75, 75, "Kim.png", x, y, "image"));
 
     }
     for (i = 0; i < myObstacles.length; i += 1) {

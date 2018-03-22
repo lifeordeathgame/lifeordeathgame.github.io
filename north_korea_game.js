@@ -102,7 +102,7 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
-    var x, y, z, score;
+    var x, y, z, score = 0;
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
 	    

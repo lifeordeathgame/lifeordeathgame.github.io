@@ -123,7 +123,7 @@ function updateGameArea() {
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 310, "image"));
 
 		}
-		else if (rannum >= 6 && <= 8){
+		else if (rannum >= 6 && rannum <= 8 ){
 		    //y = myGameArea.canvas.height - 145;
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 145, "image"));
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 75, "image"));

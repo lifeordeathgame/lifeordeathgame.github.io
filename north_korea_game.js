@@ -107,7 +107,6 @@ function updateGameArea() {
         if (myGamePiece.crashWith(myObstacles[i])) {
 	    
             myGameArea.stop();
-	    window.location.reload();
             return;
         } 
     }
@@ -136,7 +135,9 @@ function updateGameArea() {
     myGamePiece.newPos();    
     myGamePiece.update();
 }
-
+function restart() {
+    window.location.reload();
+}
 document.onkeydown = checkKey;
 document.onkeyup = doneKey;
 

@@ -8,7 +8,7 @@ function startGame() {
 
     myGameArea.start();
 }
-window.setInterval(update, 10);
+window.setInterval(updateGameArea, 10);
 
 var myGameArea = {
     canvas : document.createElement("canvas"),

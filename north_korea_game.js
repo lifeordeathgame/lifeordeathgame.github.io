@@ -11,7 +11,7 @@ function startGame() {
 
 function increment(n){
 
-  n += 1;
+  n ++;
   return n;
 }
 
@@ -131,7 +131,7 @@ function updateGameArea() {
 			y = myGameArea.canvas.height - 145;
 		}
         	myObstacles.push(new component(75, 75, "Kim.png", x, y, "image"));
-	        increment();
+	        increment(score);
 
     }
     for (i = 0; i < myObstacles.length; i += 1) {

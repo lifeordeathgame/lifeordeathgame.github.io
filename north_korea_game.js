@@ -1,15 +1,21 @@
 var myGamePiece;
 var myObstacles = [];
 var myScore;
-
+var score = 0;
 function startGame() {
     myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, 655, "image");
     myScore = new component("30px", "Consolas", "red", 50, 50, "text");
 
     myGameArea.start();
 }
-window.setInterval(updateGameArea, 10);
 
+function increment(n){
+
+  n += 1;
+  return n;
+}
+
+score=increment(score);
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
@@ -103,7 +109,7 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
-    var x, y, z, score;
+    var x, y, z;
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
 	    
@@ -115,7 +121,6 @@ function updateGameArea() {
     myGameArea.frameNo += 1;
     z = 120;
     z += -50;
-    //score = 1;
     if (myGameArea.frameNo == 1 || everyinterval(z)) {
 		var rannum = Math.floor((Math.random())* 10)+1;
         	x = myGameArea.canvas.width;
@@ -126,8 +131,8 @@ function updateGameArea() {
 			y = myGameArea.canvas.height - 145;
 		}
         	myObstacles.push(new component(75, 75, "Kim.png", x, y, "image"));
-	        
-	        score += 1;
+	        increment();
+
     }
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += - myGamePiece.sp;

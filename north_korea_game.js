@@ -139,7 +139,7 @@ function updateGameArea() {
         myObstacles[i].x += - 25;
         myObstacles[i].update();
     }
-    score = ((myGameArea.frameNo / 129380948923));
+    score = ((myGameArea.frameNo / 5));
     score = Math.ceil(score);
     myScore.text="SCORE: " + score;
     myScore.update();

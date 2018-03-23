@@ -116,24 +116,35 @@ function updateGameArea() {
     if (myGameArea.frameNo == 1 || everyinterval(z)) {
 		var rannum = Math.floor((Math.random())* 10)+1;
         	x = myGameArea.canvas.width;
-		if (rannum <= 5) {
+		if (rannum <= 4) {
         	    //y = myGameArea.canvas.height - 105;
 		    
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 75, "image"));
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 310, "image"));
 
 		}
-		else if (rannum >= 6 && rannum <= 8 ){
+		else if (rannum >= 5 && rannum <= 7 ){
 		    //y = myGameArea.canvas.height - 145;
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 145, "image"));
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 75, "image"));
 
 		}
-	        else {
+	        else if (rannum = 8 || rannum = 9) {
 		    //y = myGameArea.canvas.height - 145;
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 145, "image"));
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 220, "image"));
 
+		}
+	        else {
+		    y = myGameArea.canvas.height - 75;
+		    if (y <= 215) {
+			y += 10;    
+		    }
+		    else if (y > 215){
+			y -= 10;
+		    }
+		   
+		    myObstacles.push(new component(75, 75, "Kim.png", x, y, "image"));
 		}
     }
     for (i = 0; i < myObstacles.length; i += 1) {

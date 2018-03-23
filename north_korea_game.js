@@ -105,7 +105,7 @@ function updateGameArea() {
         if (myGamePiece.crashWith(myObstacles[i])) {
 	    
             myGameArea.stop();
-	    alert(You died!);
+	    alert("You died!");
 	    window.location.reload();
             return;
         } 

@@ -11,7 +11,7 @@ var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
         this.canvas.width = 1280;
-        this.canvas.height = 670;
+        this.canvas.height = 570;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
@@ -170,7 +170,7 @@ function checkKey(e) {
     e = e || window.event;
 
     if (e.keyCode == '32') {
-    	if (myGamePiece.y >= 550) {
+    	if (myGamePiece.y >= 450) {
     	    accelerate(-12)
 	    score += 1;
             clearmove()

@@ -137,10 +137,10 @@ function updateGameArea() {
 		}
 	        else {
 		    y = myGameArea.canvas.height - 75;
-		    if (y <= 215) {
+		    if (y <= myGameArea.canvas.height - 225) {
 			y += 10;    
 		    }
-		    else if (y > 215){
+		    else if (y > 225){
 			y -= 10;
 		    }
 		   

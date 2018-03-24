@@ -100,7 +100,7 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
-    var x, y, z, score;
+    var x, y, z, score, moveup, movedown;
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
 	    
@@ -112,6 +112,8 @@ function updateGameArea() {
     }
     myGameArea.clear();
     myGameArea.frameNo += 1;
+    moveup = false;
+    movedown = false;
     z = 65;
     if (myGameArea.frameNo == 1 || everyinterval(z)) {
 		var rannum = Math.floor((Math.random())* 10)+1;
@@ -137,13 +139,23 @@ function updateGameArea() {
 		}
 	        else {
 		    y = myGameArea.canvas.height - 75;
-		    if (y <= myGameArea.canvas.height - 225) {
-			y += 10;    
+		    
+		    if (y >= myGameArea.canvas.height - 75) {
+			moveup = true;
+			movedown = false;
+			    
 		    }
-		    else if (y > 225){
-			y -= 10;
+		    else if (y <= 220){
+			moveup = false;
+			movedown = true;
+			y += 10;
 		    }
-		   
+		    while (moveup = true && movedown = false) {
+			y -= 10;   
+		    }
+		    while (moveup = false && movedown = true) {
+			y += 10;   
+		    }
 		    myObstacles.push(new component(75, 75, "Kim.png", x, y, "image"));
 		}
     }

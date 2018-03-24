@@ -137,7 +137,7 @@ function updateGameArea() {
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 220, "image"));
 
 		}
-	        else {
+	        /*else {
 		    y = myGameArea.canvas.height - 75;
 		    
 		    if (y >= myGameArea.canvas.height - 75) {
@@ -161,7 +161,7 @@ function updateGameArea() {
 			   
 		    
 		    myObstacles.push(new component(75, 75, "Kim.png", x, y, "image"));
-		}
+		}*/
     }
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += - 25;

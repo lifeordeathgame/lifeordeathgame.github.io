@@ -169,7 +169,7 @@ function checkKey(e) {
     e = e || window.event;
 
     if (e.keyCode == '32') {
-    	if (myGamePiece.y >= 450) {
+    	if (myGamePiece.y >= myGameArea.canvas.height - 90) {
     	    accelerate(-12)
 	    score += 1;
             clearmove()

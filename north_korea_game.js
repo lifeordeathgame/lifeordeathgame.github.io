@@ -150,12 +150,16 @@ function updateGameArea() {
 			movedown = true;
 			y += 10;
 		    }
-		    while (moveup = true && movedown = false) {
-			y -= 10;   
-		    }
-		    while (moveup = false && movedown = true) {
-			y += 10;   
-		    }
+		    do{
+			y -= 10;     
+		    }while (moveup = true && movedown = false); 
+			    
+		    do{
+			y += 10;
+		    } while (moveup = false && movedown = true); 
+		    
+			   
+		    
 		    myObstacles.push(new component(75, 75, "Kim.png", x, y, "image"));
 		}
     }

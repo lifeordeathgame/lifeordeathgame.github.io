@@ -1,9 +1,11 @@
 var myGamePiece;
 var myObstacles = [];
 var myScore;
+var mySound;
 function startGame() {
     myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, 655, "image");
     myScore = new component("30px", "Consolas", "red", 50, 50, "text");
+    mySound = new sound("bounce.mp3");
     myGameArea.start();
 }
 
@@ -177,6 +179,20 @@ function updateGameArea() {
 function restart() {
     window.location.reload();
 }
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }
+}
 document.onkeydown = checkKey;
 document.onkeyup = doneKey;
 
@@ -206,7 +222,16 @@ function doneKey(e) {
 
     }
 }
+function changeBackground(){
+	if (document.getElementById("canvas").style.background === "url(https://i.ytimg.com/vi/Day_nRz7YZ4/maxresdefault.jpg)") {
+	    document.getElementById("canvas").style.background = "url(https://images.fineartamerica.com/images-medium-large-5/32-american-flag-les-cunliffe.jpg)"	
+	    mySound.play();
 
+	}
+	else if (document.getElementById("canvas").style.background === "url(https://images.fineartamerica.com/images-medium-large-5/32-american-flag-les-cunliffe.jpg)") {
+	    document.getElementById("canvas").style.background = "url(https://i.ytimg.com/vi/Day_nRz7YZ4/maxresdefault.jpg)"	
+	}
+}
 function everyinterval(n) {
     if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
     return false;

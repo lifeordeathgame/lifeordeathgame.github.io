@@ -225,7 +225,7 @@ function doneKey(e) {
 function changeBackground(){
 	alert("it working boi")
 	document.getElementById("canvas").style.background = "url(https://images.fineartamerica.com/images-medium-large-5/32-american-flag-les-cunliffe.jpg)"	
-	Sound.play();
+	mySound.play();
 
 }
 function everyinterval(n) {

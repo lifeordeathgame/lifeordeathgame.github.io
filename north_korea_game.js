@@ -6,6 +6,7 @@ function startGame() {
     myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, 655, "image");
     myScore = new component("30px", "Consolas", "red", 50, 50, "text");
     mySound = new sound("National Anthem North Korea - 애국가.mp3");
+    mySound.play();
     myGameArea.start();
 }
 
@@ -223,8 +224,6 @@ function doneKey(e) {
     }
 }
 function changeBackground(){
-	alert("it working boi")
-	document.getElementById("canvas").style.background = "url(https://images.fineartamerica.com/images-medium-large-5/32-american-flag-les-cunliffe.jpg)"	
 	mySound.play();
 
 }

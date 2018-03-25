@@ -224,14 +224,9 @@ function doneKey(e) {
 }
 function changeBackground(){
 	alert("it working boi")
-	if (document.getElementById("canvas").style.background === "url(https://i.ytimg.com/vi/Day_nRz7YZ4/maxresdefault.jpg)") {
-	    document.getElementById("canvas").style.background = "url(https://images.fineartamerica.com/images-medium-large-5/32-american-flag-les-cunliffe.jpg)"	
-	    mySound.play();
+	document.getElementById("canvas").style.background = "url(https://images.fineartamerica.com/images-medium-large-5/32-american-flag-les-cunliffe.jpg)"	
+	mySound.play();
 
-	}
-	else if (document.getElementById("canvas").style.background === "url(https://images.fineartamerica.com/images-medium-large-5/32-american-flag-les-cunliffe.jpg)") {
-	    document.getElementById("canvas").style.background = "url(https://i.ytimg.com/vi/Day_nRz7YZ4/maxresdefault.jpg)"	
-	}
 }
 function everyinterval(n) {
     if ((myGameArea.frameNo / n) % 1 == 0) {return true;}

@@ -116,7 +116,7 @@ function updateGameArea() {
 	    myGameArea.stop();
 	    alert("You died!");
     	    myGameArea.clear();
-	    if(backon = true;) {
+	    if(backon = true) {
 	    	myGameArea.context.drawImage(background,0,0);
 	    }
             startGame();
@@ -124,7 +124,7 @@ function updateGameArea() {
         } 
     }
     myGameArea.clear();
-    if(backon = true;) {
+    if(backon = true) {
 	myGameArea.context.drawImage(background,0,0);
     }
     myGameArea.frameNo += 1;

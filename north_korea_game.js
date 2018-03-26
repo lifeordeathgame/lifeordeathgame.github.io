@@ -3,6 +3,7 @@ var myObstacles = [];
 var myScore;
 var mySound;
 var background = new Image();
+var backon = false;
 background.src = "https://i.ytimg.com/vi/cr_MqS-9Oc0/maxresdefault.jpg";
 function startGame() {
     myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, 655, "image");
@@ -30,6 +31,7 @@ var myGameArea = {
     }    
 }
 background.onload = function(){
+    backon = true;
     myGameArea.context.drawImage(background,0,0);
     mySound.play();
 }
@@ -114,11 +116,17 @@ function updateGameArea() {
 	    myGameArea.stop();
 	    alert("You died!");
     	    myGameArea.clear();
+	    if(backon = true;) {
+	    	myGameArea.context.drawImage(background,0,0);
+	    }
             startGame();
             return;
         } 
     }
     myGameArea.clear();
+    if(backon = true;) {
+	myGameArea.context.drawImage(background,0,0);
+    }
     myGameArea.frameNo += 1;
     moveup = false;
     movedown = false;

@@ -124,8 +124,8 @@ function updateGameArea() {
             return;
         } 
     }
-  myGameArea.clear();
-  if(backon = true) {
+    myGameArea.clear();
+    if(backon = true) {
 	myGameArea.context.drawImage(background,0,0);
 	backon = false;
     }    

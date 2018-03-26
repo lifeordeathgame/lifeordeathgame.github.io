@@ -29,7 +29,7 @@ var myGameArea = {
         clearInterval(this.interval);
     }    
 }
-function background.onload() {
+function background/*.onload*/() {
     backon = true;
     background.src = "https://i.ytimg.com/vi/cr_MqS-9Oc0/maxresdefault.jpg";
     myGameArea.context.drawImage(background,0,0);

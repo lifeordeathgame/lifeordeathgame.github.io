@@ -139,17 +139,12 @@ function updateGameArea() {
 
 		}
 	        else {
-		    y = myGameArea.canvas.height - 75;
-		    movingHead = new component(75, 75, "Kim.png", x, y, "image");
-
+		    return;
 		}
     }
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += - 25;
         myObstacles[i].update();
-	movingHead.x += - 25;
-	movingHead.y += - 1;
-        movingHead.update();
     }
     score = ((myGameArea.frameNo / 5) / 9);
     score = Math.ceil(score);

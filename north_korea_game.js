@@ -116,8 +116,9 @@ function updateGameArea() {
     myGameArea.clear();
     myGameArea.frameNo += 1;
     z = 65;
+    var rannum = Math.floor((Math.random())* 10)+1;
     if (myGameArea.frameNo == 1 || everyinterval(z)) {
-		var rannum = Math.floor((Math.random())* 10)+1;
+		
         	x = myGameArea.canvas.width;
 		if (rannum <= 4) {
         	    //y = myGameArea.canvas.height - 105;
@@ -152,6 +153,9 @@ function updateGameArea() {
     }
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += - 25;
+	if (rannum = 10) {
+	    myObstacles[i].y += - 2;
+	}
         myObstacles[i].update();
     }
     score = ((myGameArea.frameNo / 5) / 9);

@@ -2,8 +2,6 @@ var myGamePiece;
 var myObstacles = [];
 var myScore;
 var mySound;
-var background = new Image();
-var backon = false;
 function startGame() {
     myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, 655, "image");
     myScore = new component("30px", "Consolas", "red", 50, 50, "text");
@@ -28,13 +26,6 @@ var myGameArea = {
     stop : function() {
         clearInterval(this.interval);
     }    
-}
-background.onload = function() {
-    backon = true;
-    background.src = "https://i.ytimg.com/vi/cr_MqS-9Oc0/maxresdefault.jpg";
-    myGameArea.context.drawImage(background,0,0);
-    mySound.stop();
-    mySound.play();
 }
 function component(width, height, color, x, y, type) {
     this.width = width;
@@ -117,18 +108,11 @@ function updateGameArea() {
 	    myGameArea.stop();
 	    alert("You died!");
     	    myGameArea.clear();
-	    if(backon = true) {
-	    	myGameArea.context.drawImage(background,0,0);
-	    }
             startGame();
             return;
         } 
     }
     myGameArea.clear();
-    if(backon = true) {
-	myGameArea.context.drawImage(background,0,0);
-	backon = false;
-    }    
     moveup = false;
     movedown = false;
     z = 65;
@@ -237,9 +221,10 @@ function doneKey(e) {
 
     }
 }
-//function changeBackground(){
-  //  mySound.play();
-//}
+function hype() {
+    mySound.stop();
+    mySound.play();
+}
 function everyinterval(n) {
     if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
     return false;

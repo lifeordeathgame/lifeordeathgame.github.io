@@ -4,7 +4,6 @@ var myScore;
 var mySound;
 var background = new Image();
 var backon = false;
-background.src = "https://i.ytimg.com/vi/cr_MqS-9Oc0/maxresdefault.jpg";
 function startGame() {
     myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, 655, "image");
     myScore = new component("30px", "Consolas", "red", 50, 50, "text");
@@ -32,6 +31,7 @@ var myGameArea = {
 }
 background.onload = function(){
     backon = true;
+    background.src = "https://i.ytimg.com/vi/cr_MqS-9Oc0/maxresdefault.jpg";
     myGameArea.context.drawImage(background,0,0);
     mySound.play();
 }

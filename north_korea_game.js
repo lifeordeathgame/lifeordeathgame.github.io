@@ -2,6 +2,8 @@ var myGamePiece;
 var myObstacles = [];
 var myScore;
 var mySound;
+var background = new Image();
+background.src = "https://i.ytimg.com/vi/cr_MqS-9Oc0/maxresdefault.jpg";
 function startGame() {
     myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, 655, "image");
     myScore = new component("30px", "Consolas", "red", 50, 50, "text");
@@ -27,7 +29,10 @@ var myGameArea = {
         clearInterval(this.interval);
     }    
 }
-
+background.onload = function(){
+    myGameArea.context.drawImage(background,0,0);
+    mySound.play();
+}
 function component(width, height, color, x, y, type) {
     this.width = width;
     if (type == "image") {
@@ -223,9 +228,9 @@ function doneKey(e) {
 
     }
 }
-function changeBackground(){
-    mySound.play();
-}
+//function changeBackground(){
+  //  mySound.play();
+//}
 function everyinterval(n) {
     if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
     return false;

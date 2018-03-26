@@ -106,7 +106,7 @@ function updateGameArea() {
     var x, y, z, score, highscore = "0";
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
-	    
+	    document.cookie = highscore;
             myGameArea.stop();
 	    myGameArea.clear();
 	    alert("You died!");
@@ -114,6 +114,7 @@ function updateGameArea() {
             return;
         } 
     }
+    highscore = document.cookie;
     myGameArea.clear();
     myGameArea.frameNo += 1;
     z = 65;

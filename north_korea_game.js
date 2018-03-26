@@ -6,7 +6,7 @@ function startGame() {
     myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, 655, "image");
     myScore = new component("30px", "Consolas", "red", 50, 50, "text");
     mySound = new sound("hype.mp3");
-    //myObstacles = [];
+    myObstacles = [];
     myGameArea.start();
 }
 
@@ -102,23 +102,22 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
-    var x, y, z, score, moveup, movedown;
+    var x, y, z, score;
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
-	    myGameArea.stop();
+	    
+            myGameArea.stop();
 	    alert("You died!");
-    	   // myGameArea.clear();
-            startGame();
+	    window.location.reload();
             return;
         } 
     }
     myGameArea.clear();
-    moveup = false;
-    movedown = false;
+    myGameArea.frameNo += 1;
     z = 65;
     if (myGameArea.frameNo == 1 || everyinterval(z)) {
 		var rannum = Math.floor((Math.random())* 10)+1;
-        	x = myGameArea.canvas.width; 
+        	x = myGameArea.canvas.width;
 		if (rannum <= 4) {
         	    //y = myGameArea.canvas.height - 105;
 		    
@@ -137,32 +136,18 @@ function updateGameArea() {
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 145, "image"));
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 220, "image"));
 
-		} 
-	        /*else {
+		}
+	        else {
 		    y = myGameArea.canvas.height - 75;
-		    
-		    if (y >= myGameArea.canvas.height - 75) {
-			moveup = true;
-			movedown = false;
-			    
+		    if (y <= myGameArea.canvas.height - 225) {
+			y += 10;    
 		    }
-		    else if (y <= 220){
-			moveup = false;
-			movedown = true;
-			y += 10;
+		    else if (y > 225){
+			y -= 10;
 		    }
-		    do{
-			y -= 10;     
-		    }while (moveup = true && movedown = false); 
-			    
-		    do{
-			y += 10;
-		    } while (moveup = false && movedown = true); 
-		    
-			   
-		    
+		   
 		    myObstacles.push(new component(75, 75, "Kim.png", x, y, "image"));
-		}*/
+		}
     }
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += - 25;

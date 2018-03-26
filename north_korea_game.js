@@ -167,7 +167,6 @@ function updateGameArea() {
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += - 25;
         myObstacles[i].update();
-	myGameArea.clear();
     }
     score = ((myGameArea.frameNo / 5) / 9);
     score = Math.ceil(score);

@@ -29,7 +29,7 @@ var myGameArea = {
         clearInterval(this.interval);
     }    
 }
-function background/*.onload*/() {
+background.onload = function() {
     backon = true;
     background.src = "https://i.ytimg.com/vi/cr_MqS-9Oc0/maxresdefault.jpg";
     myGameArea.context.drawImage(background,0,0);
@@ -116,19 +116,18 @@ function updateGameArea() {
         if (myGamePiece.crashWith(myObstacles[i])) {
 	    myGameArea.stop();
 	    alert("You died!");
-    	    myGameArea.clear();
+    	   /* myGameArea.clear();
 	    if(backon = true) {
 	    	myGameArea.context.drawImage(background,0,0);
-	    }
+	    }*/
             startGame();
             return;
         } 
     }
-    myGameArea.clear();
-    if(backon = true) {
+    /*  myGameArea.clear();
+  if(backon = true) {
 	myGameArea.context.drawImage(background,0,0);
-    }
-    myGameArea.frameNo += 1;
+    } */   
     moveup = false;
     movedown = false;
     z = 65;

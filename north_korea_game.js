@@ -139,7 +139,6 @@ function updateGameArea() {
 
 		}
 	        else {
-		    return;
 		}
     }
     for (i = 0; i < myObstacles.length; i += 1) {

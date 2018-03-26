@@ -154,7 +154,7 @@ function updateGameArea() {
     myScore.text="SCORE: " + score;
     myHighScore.text="HIGHSCORE: " + highscore;
     myScore.update();
-    myHighScore.update();
+    //myHighScore.update();
     myGamePiece.newPos();    
     myGamePiece.update();
 }

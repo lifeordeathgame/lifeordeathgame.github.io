@@ -29,10 +29,11 @@ var myGameArea = {
         clearInterval(this.interval);
     }    
 }
-background.onload = function(){
+function background.onload() {
     backon = true;
     background.src = "https://i.ytimg.com/vi/cr_MqS-9Oc0/maxresdefault.jpg";
     myGameArea.context.drawImage(background,0,0);
+    mySound.stop();
     mySound.play();
 }
 function component(width, height, color, x, y, type) {

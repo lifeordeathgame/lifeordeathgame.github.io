@@ -2,7 +2,6 @@ var myGamePiece;
 var myObstacles = [];
 var myScore;
 var mySound;
-var highscore = "0";
 function startGame() {
     myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, 655, "image");
     myScore = new component("30px", "Consolas", "Red", 50, 50, "text");
@@ -104,7 +103,7 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
-    var x, y, z, score;
+    var x, y, z, score, highscore = "0";
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
 	    
@@ -153,7 +152,7 @@ function updateGameArea() {
         highscore = score;
     }
     myScore.text="SCORE: " + score;
-    myHighScore.text="HIGHSCORE: " + score;
+    myHighScore.text="HIGHSCORE: " + highscore;
     myScore.update();
     myHighScore.update();
     myGamePiece.newPos();    

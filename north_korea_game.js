@@ -116,18 +116,19 @@ function updateGameArea() {
         if (myGamePiece.crashWith(myObstacles[i])) {
 	    myGameArea.stop();
 	    alert("You died!");
-    	   /* myGameArea.clear();
+    	    myGameArea.clear();
 	    if(backon = true) {
 	    	myGameArea.context.drawImage(background,0,0);
-	    }*/
+	    }
             startGame();
             return;
         } 
     }
-    /*  myGameArea.clear();
+  myGameArea.clear();
   if(backon = true) {
 	myGameArea.context.drawImage(background,0,0);
-    } */   
+	backon = false;
+    }    
     moveup = false;
     movedown = false;
     z = 65;

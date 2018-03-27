@@ -103,15 +103,6 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
-    var x, y, z, score, highscore = localStorage.getItem("highscore");
-    if(highscore !== null){
-    	if (score > highscore) {
-        	localStorage.setItem("highscore", score);      
-    	}
-    }
-    else{
-    	localStorage.setItem("highscore", score);
-    }
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
             myGameArea.stop();
@@ -153,10 +144,20 @@ function updateGameArea() {
         myObstacles[i].x += - 25;
         myObstacles[i].update();
     }
-    score = ((myGameArea.frameNo / 5) / 9);
+    let score = ((myGameArea.frameNo / 5) / 9);
     score = Math.ceil(score);
+    var highscore = localStorage.getItem("highscore");
+    if(highscore !== null){
+    	if (score > highscore) {
+        	localStorage.setItem("highscore", score);      
+    	}
+    }
+    else {
+    	localStorage.setItem("highscore", score);
+    }
+
     myScore.text="SCORE: " + score;
-    //myHighScore.text="HIGHSCORE: " + highscore;
+    myHighScore.text="HIGHSCORE: " + highscore;
     myScore.update();
     myHighScore.update();
     myGamePiece.newPos();    

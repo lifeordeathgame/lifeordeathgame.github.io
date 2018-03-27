@@ -156,9 +156,6 @@ function updateGameArea() {
     }
     score = ((myGameArea.frameNo / 5) / 9);
     score = Math.ceil(score);
-    if (score > highscore) {
-        highscore = score;
-    }
     myScore.text="SCORE: " + score;
     myHighScore.text="HIGHSCORE: " + highscore;
     myScore.update();

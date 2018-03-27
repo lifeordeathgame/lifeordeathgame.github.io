@@ -114,16 +114,16 @@ function updateGameArea() {
     }*/
     
     var ranfactnum = Math.floor((Math.random())* 5)+1;
-    if (ranfactnum = 1){
+    if (ranfactnum == 1){
         ranfact = "Did you know that over 5000 westerners a year travel to North Korea?"
     }
-    else if (ranfactnum = 2) {
+    else if (ranfactnum == 2) {
 	ranfact = "Did you know that Kim Il-Sung was handpicked by Russian oficials to rule North Korea?"   
     }
-    else if (ranfactnum = 3) {
+    else if (ranfactnum == 3) {
 	ranfact = "Did you know that Kim Jong-Un is a basketball fanatic?"
     }
-    else if (ranfactnum = 4) {
+    else if (ranfactnum == 4) {
 	ranfact = "Did you know that the DPRK is celebrating its 70th anniversary"   
     }
     else {

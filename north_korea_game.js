@@ -103,7 +103,7 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
-    var x, y, z, score, /*highscore = localStorage.getItem("highscore")*/;
+    var x, y, z, score/*, highscore = localStorage.getItem("highscore")*/;
   /*  if(highscore !== null){
     	if (score > highscore) {
         	localStorage.setItem("highscore", score);      

@@ -103,7 +103,7 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
-    var x, y, z, score/*, highscore = localStorage.getItem("highscore")*/;
+    var x, y, z, score, ranfact/*, highscore = localStorage.getItem("highscore")*/;
   /*  if(highscore !== null){
     	if (score > highscore) {
         	localStorage.setItem("highscore", score);      
@@ -112,11 +112,28 @@ function updateGameArea() {
     else{
     	localStorage.setItem("highscore", score);
     }*/
+    
+    var ranfactnum = Math.floor((Math.random())* 5)+1;
+    if (ranfactnum = 1){
+        ranfact = "Did you know that over 5000 westerners a year travel to North Korea?"
+    }
+    else if (ranfactnum = 2) {
+	ranfact = "Did you know that Kim Il-Sung was handpicked by Russian oficials to rule North Korea?"   
+    }
+    else if (ranfactnum = 3) {
+	ranfact = "Did you know that Kim Jong-Un is a basketball fanatic?"
+    }
+    else if (ranfactnum = 4) {
+	ranfact = "Did you know that the DPRK is celebrating its 70th anniversary"   
+    }
+    else {
+	ranfact = "Did you know that Kim Jong-Un went to school in Switzerland?"
+    }
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
             myGameArea.stop();
 	    myGameArea.clear();
-	    alert("You died!");
+	    alert("You died!" + ranfact);
 	    startGame();
             return;
         } 

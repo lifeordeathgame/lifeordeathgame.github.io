@@ -133,7 +133,7 @@ function updateGameArea() {
         if (myGamePiece.crashWith(myObstacles[i])) {
             myGameArea.stop();
 	    myGameArea.clear();
-	    alert("You died!" + ranfact);
+	    alert("You died! " + ranfact);
 	    startGame();
             return;
         } 

@@ -121,7 +121,6 @@ function updateGameArea() {
             return;
         } 
     }
-    highscore = document.cookie;
     myGameArea.clear();
     myGameArea.frameNo += 1;
     z = 65;

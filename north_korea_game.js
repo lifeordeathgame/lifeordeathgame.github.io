@@ -103,8 +103,15 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
-    var x, y, z, score, highscore = document.cookie;
-    highscore = 0;
+    var x, y, z, score, highscore = localStorage.getItem("highscore");
+    if(highscore !== null){
+    	if (score > highscore) {
+        	localStorage.setItem("highscore", score);      
+    	}
+    }
+    else{
+    	localStorage.setItem("highscore", score);
+    }
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
             myGameArea.stop();

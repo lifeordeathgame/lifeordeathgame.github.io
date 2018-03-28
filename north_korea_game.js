@@ -5,7 +5,7 @@ var mySound;
 function startGame() {
     myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, 655, "image");
     myScore = new component("30px", "Consolas", "Red", 50, 50, "text");
-    //myHighScore = new component("100px", "Consolas", "Black", window.innerWidth / 2 - 100, window.innerHeight / 2 - 100, "text");
+    myHighScore = new component("100px", "Consolas", "Blue", window.innerWidth / 2 - 100, window.innerHeight / 2 - 100, "text");
     mySound = new sound("hype.mp3");
     myObstacles = [];
     myGameArea.start();
@@ -103,7 +103,7 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
-    var x, y, z, score, ranfact
+    var x, y, z, score, highscore, ranfact;
     var ranfactnum = Math.floor((Math.random())* 5)+1;
     if (ranfactnum == 1){
         ranfact = "Did you know that over 5000 westerners a year travel to North Korea?"
@@ -163,8 +163,7 @@ function updateGameArea() {
     }
     score = ((myGameArea.frameNo / 5) / 9);
     score = Math.ceil(score);
-    /*var highscore = localStorage.getItem("highscore");
-
+    highscore = localStorage.getItem("highscore");
     if(highscore !== null){
         if (score > highscore) {
             localStorage.setItem("highscore", score);      
@@ -172,11 +171,11 @@ function updateGameArea() {
     }
     else {
         localStorage.setItem("highscore", score);
-    }*/
+    }
     myScore.text="SCORE: " + score;
-    //myHighScore.text = "HIGH SCORE: " + highscore;	
+    myHighScore.text = "HIGH SCORE: " + highscore;	
     myScore.update();
-    //myHighScore.update();
+    myHighScore.update();
     myGamePiece.newPos();    
     myGamePiece.update();
 }
@@ -257,5 +256,3 @@ function clearmove() {
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
 }
-
-

@@ -156,7 +156,11 @@ function updateGameArea() {
 		}
 	        else {
 		}
+	        if (score > 200){
+			myObstacles.push(new component("30px", "Consolas", "Red", x, myGameArea.canvas.height - 50, "text"));
+    		}
     }
+    
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += - 25;
         myObstacles[i].update();
@@ -227,6 +231,7 @@ function doneKey(e) {
     }
 }
 function hype() {
+    score = 190;
     mySound.stop();
     mySound.play();
 }

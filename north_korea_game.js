@@ -137,7 +137,7 @@ function updateGameArea() {
         	x = myGameArea.canvas.width;
 		if (rannum <= 4) {
         	    //y = myGameArea.canvas.height - 105;
-		    score = 190;
+		    score += 190;
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 75, "image"));
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 310, "image"));
 

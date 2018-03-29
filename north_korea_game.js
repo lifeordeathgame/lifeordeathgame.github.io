@@ -156,7 +156,8 @@ function updateGameArea() {
 		}
 	        else {
 		}
-	        if (score > 200){
+	        if (score => 10){
+			alert(score)
 			myObstacles.push(new component("30px", "Consolas", "Red", x, myGameArea.canvas.height - 50, "text"));
     		}
     }

@@ -129,6 +129,8 @@ function updateGameArea() {
             return;
         } 
     }
+    score = ((myGameArea.frameNo / 5) / 9);
+    score = Math.ceil(score);
     myGameArea.clear();
     myGameArea.frameNo += 1;
     z = 65;
@@ -166,8 +168,7 @@ function updateGameArea() {
         myObstacles[i].x += - 25;
         myObstacles[i].update();
     }
-    score = ((myGameArea.frameNo / 5) / 9);
-    score = Math.ceil(score);
+    
     /*var highscore = localStorage.getItem("highscore");
 
     if(highscore !== null){

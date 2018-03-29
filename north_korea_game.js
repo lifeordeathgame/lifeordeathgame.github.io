@@ -129,11 +129,12 @@ function updateGameArea() {
             return;
         } 
     }
-    score = ((myGameArea.frameNo / 5) / 9);
-    score = Math.ceil(score);
+    
     myGameArea.clear();
     myGameArea.frameNo += 1;
     z = 65;
+    score = ((myGameArea.frameNo / 5) / 9);
+    score = Math.ceil(score);
     if (myGameArea.frameNo == 1 || everyinterval(z)) {
 		var rannum = Math.floor((Math.random())* 10)+1;
         	x = myGameArea.canvas.width;

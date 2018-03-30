@@ -121,20 +121,22 @@ function updateGameArea() {
     else {
 	ranfact = "Did you know that Kim Jong-Un went to school in Switzerland?"
     }
+    myGameArea.frameNo += 1;
+    score = ((myGameArea.frameNo / 5) / 9);
+    score = Math.ceil(score);
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
             myGameArea.stop();
 	    myGameArea.clear();
-	    function deadmessage();
+	    alert("You died! Your score was " + score +". " + ranfact);
+	    startGame();
             return;
         } 
     }
     
     myGameArea.clear();
-    myGameArea.frameNo += 1;
+    
     z = 65;
-    score = ((myGameArea.frameNo / 5) / 9);
-    score = Math.ceil(score);
     if (myGameArea.frameNo == 1 || everyinterval(z)) {
 		var rannum = Math.floor((Math.random())* 10)+1;
         	x = myGameArea.canvas.width;
@@ -176,10 +178,6 @@ function updateGameArea() {
         localStorage.setItem("highscore", score);
     }*/
     myScore.text="SCORE: " + score;
-    function deadmessage(){
-        alert("You died! Your score was " + score +". " + ranfact);
-	startGame();
-    }
     //myHighScore.text = "HIGH SCORE: " + highscore;	
     myScore.update();
     //myHighScore.update();

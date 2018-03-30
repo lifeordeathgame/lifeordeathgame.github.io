@@ -29,7 +29,9 @@ html, body {
 #scores{
     text-align: center;
     font-family: "Arial", Times, serif;
-    font-size: 12px;
+}
+#score{
+    font-size: 15px;
 }
 #scoretitle{
     font-size: 30px;

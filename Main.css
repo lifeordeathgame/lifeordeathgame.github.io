@@ -37,6 +37,10 @@ html, body {
     font-weight: 900;
     font-size: 20px;
 }
+#scorereward{
+    font-weight: 900;
+    font-size:17px;
+}
 html
 {
   cursor: url(cursor.png), auto;

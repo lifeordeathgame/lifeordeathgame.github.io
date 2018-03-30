@@ -1,3 +1,4 @@
+alert("space or w to jump, s or shift the crouch")
 var myGamePiece;
 var myObstacles = [];
 var myScore;
@@ -210,13 +211,13 @@ function checkKey(e) {
 
     e = e || window.event;
 
-    if (e.keyCode == '32') {
+    if (e.keyCode == '32' || e.keyCode == '87') {
     	if (myGamePiece.y >= myGameArea.canvas.height - 90) {
     	    accelerate(-12)
             clearmove()
         }
     }
-    if (e.keyCode == '16') {
+    if (e.keyCode == '83' || e.keyCode == '16') {
         myGamePiece.height = 60;
 	
     }

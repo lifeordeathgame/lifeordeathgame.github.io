@@ -227,7 +227,7 @@ function doneKey(e) {
 
     e = e || window.event;
 
-    if (e.keyCode == '16') {
+    if (e.keyCode == '83' || e.keyCode == '16') {
         myGamePiece.height = 90;
 
     }

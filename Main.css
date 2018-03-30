@@ -26,13 +26,13 @@ html, body {
     color: whitesmoke;
     text-shadow: 0 0 1px #000000, 0 0 2px #000000, 0 0 3px #0d0d0d, 0 0 4px #0d0d0d, 0 0 5px #1a1a1a, 0 0 6px #1a1a1a, 0 0 7px #262626, 0 0 8px #262626;
 }
-#scoretitle{
-    font-size: 30px;
-}
 #scores{
     text-align: center;
     font-family: "Arial", Times, serif;
     font-size: 12px;
+}
+#scoretitle{
+    font-size: 30px;
 }
 html
 {

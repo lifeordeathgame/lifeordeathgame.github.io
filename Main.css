@@ -23,7 +23,8 @@ html, body {
     display: block;  /* No floating content on sides */
 }
 #god{
-text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #FFDD1B, 0 0 5px #FFDD1B, 0 0 6px #FFDD1B, 0 0 7px #FFDD1B, 0 0 8px #FFDD1B;
+color: whitesmoke;
+text-shadow: 0 0 1px #000000, 0 0 2px #000000, 0 0 3px #0d0d0d, 0 0 4px #0d0d0d, 0 0 5px #1a1a1a, 0 0 6px #1a1a1a, 0 0 7px #262626, 0 0 8px #262626;
 }
 html
 {

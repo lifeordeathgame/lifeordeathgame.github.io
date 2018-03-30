@@ -125,8 +125,7 @@ function updateGameArea() {
         if (myGamePiece.crashWith(myObstacles[i])) {
             myGameArea.stop();
 	    myGameArea.clear();
-	    alert("You died! Your score was " + score +". " + ranfact);
-	    startGame();
+	    function deadmessage();
             return;
         } 
     }
@@ -159,10 +158,6 @@ function updateGameArea() {
 		}
 	        else {
 		}
-	        if (score == 10){
-			alert(score)
-			myObstacles.push(new component("30px", "Consolas", "Red", x, myGameArea.canvas.height - 50, "text"));
-    		}
     }
     
     for (i = 0; i < myObstacles.length; i += 1) {
@@ -181,6 +176,10 @@ function updateGameArea() {
         localStorage.setItem("highscore", score);
     }*/
     myScore.text="SCORE: " + score;
+    function deadmessage(){
+        alert("You died! Your score was " + score +". " + ranfact);
+	startGame();
+    }
     //myHighScore.text = "HIGH SCORE: " + highscore;	
     myScore.update();
     //myHighScore.update();

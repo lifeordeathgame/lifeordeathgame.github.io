@@ -85,6 +85,18 @@ function getName() {
     "Julian"
     );
   }
+  else if (pswrd.toLowerCase() == "hubburt") {
+    alert("Password Accepted. Hello Hubert.");
+    return (
+    "Hubert"
+    );
+  }
+  else if (pswrd.toLowerCase() == "anjanapravi1") {
+    alert("Password Accepted. Hello Sanjay.");
+    return (
+    "Sanjay"
+    );
+  }
   else {
     alert("Nice Try");
     window.location.reload(true);

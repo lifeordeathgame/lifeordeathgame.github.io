@@ -67,19 +67,19 @@ function getRandomColor() {
 }
 function getName() {
   var pswrd = prompt("Enter your password"); 
-  if (sign.toLowerCase() == "stoptheships") {
+  if (pswrd.toLowerCase() == "stoptheships") {
     alert("Password Accepted. Hello Vivian.");
     return (
     "Vivian"
     );
   }
-  else if (sign.toLowerCase() == "sinduisamazing") {
+  else if (pswrd.toLowerCase() == "sinduisamazing") {
     alert("Password Accepted. Hello Sindu.");
     return (
     "Sindu"
     );
   }
-  else if (sign.toLowerCase() == "dev") {
+  else if (pswrd.toLowerCase() == "dev") {
     alert("Password Accepted. Hello Julian.");
     return (
     "Julian"

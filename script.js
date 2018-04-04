@@ -1,30 +1,6 @@
 const CLIENT_ID = '2494d0K9JURCsFh2';
 
-function getName() {
-  var pswrd = prompt("Enter your password"); 
-  if (sign.toLowerCase() == "stoptheships") {
-    alert("Password Accepted. Hello Vivian.");
-    return (
-    "Vivian"
-    );
-  }
-  else if (sign.toLowerCase() == "sinduisamazing") {
-    alert("Password Accepted. Hello Sindu.");
-    return (
-    "Sindu"
-    );
-  }
-  else if (sign.toLowerCase() == "dev") {
-    alert("Password Accepted. Hello Julian.");
-    return (
-    "Julian"
-    );
-  }
-  else {
-    alert("Nice Try");
-    window.location.reload(true);
-  }
-}
+
 
 const drone = new ScaleDrone(CLIENT_ID, {
   
@@ -89,7 +65,31 @@ drone.on('error', error => {
 function getRandomColor() {
   return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
 }
-
+function getName() {
+  var pswrd = prompt("Enter your password"); 
+  if (sign.toLowerCase() == "stoptheships") {
+    alert("Password Accepted. Hello Vivian.");
+    return (
+    "Vivian"
+    );
+  }
+  else if (sign.toLowerCase() == "sinduisamazing") {
+    alert("Password Accepted. Hello Sindu.");
+    return (
+    "Sindu"
+    );
+  }
+  else if (sign.toLowerCase() == "dev") {
+    alert("Password Accepted. Hello Julian.");
+    return (
+    "Julian"
+    );
+  }
+  else {
+    alert("Nice Try");
+    window.location.reload(true);
+  }
+}
 //------------- DOM STUFF
 
 const DOM = {

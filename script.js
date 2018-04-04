@@ -97,6 +97,18 @@ function getName() {
     "Sanjay"
     );
   }
+  else if (pswrd.toLowerCase() == "invincibletkd") {
+    alert("Password Accepted. Hello Yama.");
+    return (
+    "Yama"
+    );
+  }
+  else if (pswrd.toLowerCase() == "urmomgay123") {
+    alert("Password Accepted. Hello Gavin.");
+    return (
+    "Gavin"
+    );
+  }
   else {
     alert("Nice Try");
     window.location.reload(true);

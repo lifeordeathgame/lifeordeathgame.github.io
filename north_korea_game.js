@@ -123,7 +123,7 @@ function updateGameArea() {
 	ranfact = "Did you know that Kim Jong-Un went to school in Switzerland?"
     }
     myGameArea.frameNo += 1;
-    score = ((myGameArea.frameNo / 5) / 9);
+    score = ((myGameArea.frameNo / 45)* 1.08);
     score = Math.ceil(score);
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {

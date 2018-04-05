@@ -123,7 +123,7 @@ function updateGameArea() {
 	ranfact = "Did you know that Kim Jong-Un went to school in Switzerland?"
     }
     myGameArea.frameNo += 1;
-    score = ((myGameArea.frameNo / 45)* 1.08);
+    score = ((myGameArea.frameNo / 45)* 1.1);
     score = Math.ceil(score);
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
@@ -141,19 +141,19 @@ function updateGameArea() {
     if (myGameArea.frameNo == 1 || everyinterval(z)) {
 		var rannum = Math.floor((Math.random())* 10)+1;
         	x = myGameArea.canvas.width;
-		if (rannum <= 4) {
+		if (rannum <= 5) {
         	    //y = myGameArea.canvas.height - 105;
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 75, "image"));
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 310, "image"));
 
 		}
-		else if (rannum >= 5 && rannum <= 7 ){
+		else if (rannum >= 6 && rannum <= 7 ){
 		    //y = myGameArea.canvas.height - 145;
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 145, "image"));
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 75, "image"));
 
 		}
-	        else if (rannum == 8 || rannum == 9) {
+	        else if (rannum == 8 || rannum == 9 || rannum == 10) {
 		    //y = myGameArea.canvas.height - 145;
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 145, "image"));
 		    myObstacles.push(new component(75, 75, "Kim.png", x, myGameArea.canvas.height - 220, "image"));

@@ -1,0 +1,43 @@
+.sindu1{
+  color: red;
+  text-shadow: 0 0 1px #000000, 0 0 2px #000000, 0 0 3px #0d0d0d, 0 0 4px #0d0d0d, 0 0 5px #1a1a1a, 0 0 6px #1a1a1a, 0 0 7px #262626, 0 0 8px #262626;
+}
+.sindu2{
+  color: orange;
+  text-shadow: 0 0 1px #000000, 0 0 2px #000000, 0 0 3px #0d0d0d, 0 0 4px #0d0d0d, 0 0 5px #1a1a1a, 0 0 6px #1a1a1a, 0 0 7px #262626, 0 0 8px #262626;
+}
+.sindu3{
+  color: yellow;
+  text-shadow: 0 0 1px #000000, 0 0 2px #000000, 0 0 3px #0d0d0d, 0 0 4px #0d0d0d, 0 0 5px #1a1a1a, 0 0 6px #1a1a1a, 0 0 7px #262626, 0 0 8px #262626;
+}
+.sindu4{
+  color: green;
+  text-shadow: 0 0 1px #000000, 0 0 2px #000000, 0 0 3px #0d0d0d, 0 0 4px #0d0d0d, 0 0 5px #1a1a1a, 0 0 6px #1a1a1a, 0 0 7px #262626, 0 0 8px #262626;
+}
+.sindu5{
+  color: blue;
+  text-shadow: 0 0 1px #000000, 0 0 2px #000000, 0 0 3px #0d0d0d, 0 0 4px #0d0d0d, 0 0 5px #1a1a1a, 0 0 6px #1a1a1a, 0 0 7px #262626, 0 0 8px #262626;
+}
+.sindu6{
+  color: purple;
+  text-shadow: 0 0 1px #000000, 0 0 2px #000000, 0 0 3px #0d0d0d, 0 0 4px #0d0d0d, 0 0 5px #1a1a1a, 0 0 6px #1a1a1a, 0 0 7px #262626, 0 0 8px #262626;
+}
+#god{
+  color: whitesmoke;
+  text-shadow: 0 0 1px #000000, 0 0 2px #000000, 0 0 3px #0d0d0d, 0 0 4px #0d0d0d, 0 0 5px #1a1a1a, 0 0 6px #1a1a1a, 0 0 7px #262626, 0 0 8px #262626;
+}
+#scores{
+  text-align: center;
+  font-family: "Arial", Times, serif;
+}
+#score{
+  font-size: 20px;
+}
+#scoretitle{
+  font-weight: 900;
+  font-size: 20px;
+}
+#scorereward{
+  font-weight: 200;
+  font-size:17px;
+}

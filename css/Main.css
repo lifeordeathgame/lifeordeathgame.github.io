@@ -1,15 +1,3 @@
-.hype {
-   left: 80%;
-   top: 5%;
-}
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    border: 0;
-    overflow: hidden; /*  Disable scrollbars */
-    display: block;  /* No floating content on sides */
-}
 .sindu1{
     color: red;
     text-shadow: 0 0 1px #000000, 0 0 2px #000000, 0 0 3px #0d0d0d, 0 0 4px #0d0d0d, 0 0 5px #1a1a1a, 0 0 6px #1a1a1a, 0 0 7px #262626, 0 0 8px #262626;

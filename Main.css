@@ -278,7 +278,7 @@ canvas {
   margin-right: -50%;
   transform: translate(-50%, -50%)
 }
-.buttonindextwo {
+#buttonindextwo {
   display: inline-block;
   color: #006699;
   text-align: center;

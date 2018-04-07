@@ -1,88 +1,30 @@
-.buttonplay {
+#buttonplay {
   display: inline-block;
-  border-radius: 4px;
-  background-color: #2eb82e;
-  border: none;
-  color: #ffffff;
+  color: #cc0000;
   text-align: center;
-  font-size: 28px;
+  font-size: 100px;
   padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
   cursor: pointer;
-  margin: 5px;
   position: absolute; 
   top:  444px; 
   left:  50%;
   text-shadow: 2px 2px #000000;
+  margin: 5px;
   margin-right: -50%;
   transform: translate(-50%, -50%)
 }
-.buttonplay span {
-  cursor: pointer;
+#buttonscore {
   display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.buttonplay span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.buttonplay:hover span {
-  padding-right: 25px;
-}
-
-.buttonplay:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-.buttonscore {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #ff66ff;
-  border: none;
-  color: #ffffff;
+  color: #006699;
   text-align: center;
-  font-size: 28px;
+  font-size: 100px;
   padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
   cursor: pointer;
-  margin: 5px;
   position: absolute; 
   top:  608px; 
   left:  50%;
   text-shadow: 2px 2px #000000;
+  margin: 5px;
   margin-right: -50%;
   transform: translate(-50%, -50%)
-}
-.buttonscore span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.buttonscore span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.buttonscore:hover span {
-  padding-right: 25px;
-}
-
-.buttonscore:hover span:after {
-  opacity: 1;
-  right: 0;
 }

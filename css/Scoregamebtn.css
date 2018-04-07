@@ -28,3 +28,7 @@
   margin-right: -50%;
   transform: translate(-50%, -50%)
 }
+H1{
+  font-family: 'Black Ops One'/*, cursive*/;
+  font-size: 50px;
+}

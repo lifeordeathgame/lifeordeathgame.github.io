@@ -2,8 +2,12 @@ html{
   cursor: url(http://northkoreaworld.com/imgs/cursor.png), auto;
   font-family: 'Bahiana';
 }
-p, pre, a{
+p, a{
   font-size: 25px;
+}
+pre{
+  font-family: 'Bahiana';
+  font-size: 20px;
 }
 a{
   color: red;

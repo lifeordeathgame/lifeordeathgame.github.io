@@ -29,13 +29,8 @@
   transform: translate(-50%, -50%)
 }
 #gametitle1{
-  font-family: 'Black Ops One'/*, cursive*/;
-  font-size: 80px;
-  text-align: center;
-}
-#gametitle2{
-  font-family: 'Black Ops One'/*, cursive*/;
-  font-size: 100px;
+  font-size: 130px;
+  margin: 50px;
   text-align: center;
 }
 #vrsno{

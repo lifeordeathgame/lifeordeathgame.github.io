@@ -8,7 +8,7 @@ function startGame() {
 , "image");
     myScore = new component("30px", "Consolas", "Red", 50, 50, "text");
     //myHighScore = new component("100px", "Consolas", "Black", window.innerWidth / 2 - 100, window.innerHeight / 2 - 100, "text");
-    mySound = new sound("Hype.mp3");
+    mySound = new sound("Vivian and Nathan Duet.mp3");
     myObstacles = [];
     myGameArea.start();
 }
@@ -202,10 +202,9 @@ function sound(src) {
         this.sound.pause();
     }
 }
-//mySound.play();
 document.onkeydown = checkKey;
 document.onkeyup = doneKey;
-
+mySound.play();
 function checkKey(e) {
 
     e = e || window.event;

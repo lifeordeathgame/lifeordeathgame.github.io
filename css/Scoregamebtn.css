@@ -30,8 +30,9 @@
 }
 H1{
   font-family: 'Black Ops One'/*, cursive*/;
-  font-size: 50px;
+  font-size: 100px;
+  left: 50%;
 }
 #vrsno{
-  font-size: 15px;
+  font-size: 30px;
 }

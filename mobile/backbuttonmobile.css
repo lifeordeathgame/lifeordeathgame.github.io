@@ -1,1 +1,17 @@
+.back {
+  top: 5%;
+  left: 90%;
+  font-family: 'Bahiana';
+  display: inline-block;
+  color: #cc0000;
+  text-align: center;
+  font-size: 50px;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  text-shadow: 2px 2px #000000;
+  margin: 5px;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
 

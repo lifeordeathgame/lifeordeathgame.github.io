@@ -8,7 +8,7 @@ function startGame() {
 , "image");
     myScore = new component("30px", "Consolas", "Red", 50, 50, "text");
     //myHighScore = new component("100px", "Consolas", "Black", window.innerWidth / 2 - 100, window.innerHeight / 2 - 100, "text");
-    mySound = new sound("http://northkoreaworld.com/Vivian and Nathan Duet.mp3");
+    //mySound = new sound("http://northkoreaworld.com/Vivian and Nathan Duet.mp3");
     myObstacles = [];
     myGameArea.start();
 }
@@ -188,7 +188,7 @@ function updateGameArea() {
 function restart() {
     window.location.reload();
 }
-function sound(src) {
+/*function sound(src) {
     this.sound = document.createElement("audio");
     this.sound.src = src;
     this.sound.setAttribute("preload", "auto");
@@ -201,7 +201,7 @@ function sound(src) {
     this.stop = function(){
         this.sound.pause();
     }
-}
+}*/
 document.onkeydown = checkKey;
 document.onkeyup = doneKey;
 //mySound.play();

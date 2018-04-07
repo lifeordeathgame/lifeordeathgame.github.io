@@ -204,7 +204,7 @@ function sound(src) {
 }
 document.onkeydown = checkKey;
 document.onkeyup = doneKey;
-mySound.play();
+//mySound.play();
 function checkKey(e) {
 
     e = e || window.event;

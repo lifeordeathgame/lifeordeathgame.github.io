@@ -5,6 +5,9 @@ html{
 p, a{
   font-size: 25px;
 }
+a{
+  color: red;
+}
 H1{
   font-size: 50px;
 }

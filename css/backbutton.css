@@ -1,43 +1,16 @@
-
-.button {
+.back {
+  top: 5%; 
+  left: 90%;
+  font-family: 'Bahiana';
   display: inline-block;
-  border-radius: 4px;
-  background-color: #cc0000;
-  border: none;
-  color: #ffffff;
+  color: #cc0000;
   text-align: center;
-  font-size: 28px;
+  font-size: 50px;
   padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
   cursor: pointer;
-  margin: 5px;
   position: absolute; 
-  top:  20px; 
-  left:  1020px;
   text-shadow: 2px 2px #000000;
-}
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
+  margin: 5px;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
 }

@@ -1,1 +1,39 @@
+#buttonplay {
+  display: inline-block;
+  color: #cc0000;
+  text-align: center;
+  font-size: 100px;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  top:  444px;
+  left:  50%;
+  text-shadow: 2px 2px #000000;
+  margin: 5px;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+#buttonscore {
+  display: inline-block;
+  color: #006699;
+  text-align: center;
+  font-size: 100px;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  top:  608px;
+  left:  50%;
+  text-shadow: 2px 2px #000000;
+  margin: 5px;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+#gametitle1{
+  font-size: 130px;
+  margin: 50px;
+  text-align: center;
+}
+#vrsno{
+  font-size: 30px;
+}
 

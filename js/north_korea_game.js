@@ -202,7 +202,7 @@ function sound(src) {
         this.sound.pause();
     }
 }
-mySound.play();
+//mySound.play();
 document.onkeydown = checkKey;
 document.onkeyup = doneKey;
 

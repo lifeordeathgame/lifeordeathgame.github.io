@@ -28,19 +28,18 @@
 }
 #scores{
   text-align: center;
-  font-family: "Arial", Times, serif;
+  font-family: 'Bahiana';
 }
 #score{
   font-size: 20px;
 }
 #scoretitle{
   font-weight: 900;
-  font-size: 20px;
+  font-size: 40px;
 }
 #scorereward{
   font-weight: 200;
-  font-size:17px;
+  font-size:30px;
 }
-pre{
-  font-family: 'Bahiana';
-}
+  
+

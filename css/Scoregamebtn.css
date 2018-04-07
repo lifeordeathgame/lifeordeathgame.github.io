@@ -28,10 +28,15 @@
   margin-right: -50%;
   transform: translate(-50%, -50%)
 }
-H1{
+#gametitle1{
+  font-family: 'Black Ops One'/*, cursive*/;
+  font-size: 80px;
+  text-align: center;
+}
+#gametitle2{
   font-family: 'Black Ops One'/*, cursive*/;
   font-size: 100px;
-  left: 50%;
+  text-align: center;
 }
 #vrsno{
   font-size: 30px;

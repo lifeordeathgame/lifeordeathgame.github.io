@@ -6,10 +6,6 @@ html, body {
     overflow: hidden; 
     display: block;  
 }
-.hype {
-   left: 80%;
-   top: 5%;
-}
 canvas {
     border:1px solid #d3d3d3;
     background-image: url("https://i.ytimg.com/vi/cr_MqS-9Oc0/maxresdefault.jpg"); 

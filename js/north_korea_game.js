@@ -209,13 +209,13 @@ function checkKey(e) {
 
     e = e || window.event;
 
-    if (e.keyCode == '32' || e.keyCode == '87' || e.keyCode == '38' || e.keyCode == '0') {
+    if (e.keyCode == '32' || e.keyCode == '87' || e.keyCode == '38' || e.button == '0') {
     	if (myGamePiece.y >= myGameArea.canvas.height - 90) {
     	    accelerate(-12)
             clearmove()
         }
     }
-    if (e.keyCode == '83' || e.keyCode == '16' || e.keyCode == '40' || e.keyCode == '2') {
+    if (e.keyCode == '83' || e.keyCode == '16' || e.keyCode == '40' || e.button == '2') {
         myGamePiece.height = 60;
 	
     }

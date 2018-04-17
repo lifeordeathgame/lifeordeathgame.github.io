@@ -210,7 +210,7 @@ document.onkeyup = doneKey;
 function checkKey(e) {
 
     e = e || window.event;
-    if (e.button == '0') {
+    if (e.keyCode == '0') {
     	alert("clicky")
     }
 

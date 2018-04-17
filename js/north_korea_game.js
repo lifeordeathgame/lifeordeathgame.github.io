@@ -205,9 +205,14 @@ function restart() {
 document.onkeydown = checkKey;
 document.onkeyup = doneKey;
 //mySound.play();
+
+
 function checkKey(e) {
 
     e = e || window.event;
+    if e.button == '0' {
+    	alert("clicky")
+    }
 
     if (e.keyCode == '32' || e.keyCode == '87' || e.keyCode == '38' || e.button == '0') {
     	if (myGamePiece.y >= myGameArea.canvas.height - 90) {

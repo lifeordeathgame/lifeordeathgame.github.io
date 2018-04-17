@@ -225,7 +225,7 @@ function doneKey(e) {
 
     e = e || window.event;
 
-    if (e.keyCode == '83' || e.keyCode == '16' || e.keyCode == '40' || e.keyCode == '2') {
+    if (e.keyCode == '83' || e.keyCode == '16' || e.keyCode == '40' || e.button == '2') {
         myGamePiece.height = 90;
 
     }

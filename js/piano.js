@@ -283,7 +283,11 @@ function checkKey(e) {
     if (e.keyCode == '83') {
       
     }
-
+}
+function hype() {
+    mySound.stop();
+    mySound.play();
+}
 function doneKey(e) {
 
     e = e || window.event;

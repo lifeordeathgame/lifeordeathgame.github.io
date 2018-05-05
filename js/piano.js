@@ -64,6 +64,19 @@ function component(width, height, color, x, y, type) {
         	ctx.fillStyle = color;
         	ctx.fillRect(this.x, this.y, this.width, this.height);
         }
+	this.newPos = function() {
+    	this.sp += 0.005
+    	if (this.gravitySpeed < 0){
+    		this.gravitySpeed += this.gravity * 5;
+    	}
+        
+    	else {
+        	this.gravitySpeed += this.gravity * 2;
+        }
+        this.x += this.speedX;
+        this.y += this.speedY + this.gravitySpeed;
+        this.hitBottom();
+    }
       }
 
     

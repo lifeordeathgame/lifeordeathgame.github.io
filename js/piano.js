@@ -293,10 +293,7 @@ function doneKey(e) {
 
     }
 }
-function hype() {
-    mySound.stop();
-    mySound.play();
-}
+
 
 
 

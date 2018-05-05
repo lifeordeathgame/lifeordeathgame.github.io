@@ -4,10 +4,32 @@ var myGamePiece;
 var myObstacles = [];
 var myScore;
 var mySound;
-var pklc,pkld,pkle,pklf,pklg,pkla,pklb,pkhc,pkhd,pkhe,pkhf,pkhg,pkha,pkhb,pklc,pkldf,pklef,pklgf,pklaf,pklbf,pkhdf,pkhef,pkhgf,pkhaf,pkhbf,npklc,npkld,npkle,npklf,npklg,npkla,npklb,npkhc,npkhd,npkhe,npkhf,npkhg,npkha,npkhb,npklc,npkldf,npklef,npklgf,npklaf,npklbf,npkhdf,npkhef,npkhgf,npkhaf,npkhbf
+var pklc,pkld,pkle,pklf,pklg,pkla,pklb,pkhc,pkhd,pkhe,pkhf,pkhg,pkha,pkhb,pklc,pkldf,pklef,pklgf,pklaf,pklbf,pkhdf,pkhef,pkhgf,pkhaf,pkhbf
 function startGame() {
-    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90
-, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90, "image");
     myScore = new component("30px", "Consolas", "Red", 50, 50, "text");
     //myHighScore = new component("100px", "Consolas", "Black", window.innerWidth / 2 - 100, window.innerHeight / 2 - 100, "text");
     //mySound = new sound("http://northkoreaworld.com/Vivian and Nathan Duet.mp3");

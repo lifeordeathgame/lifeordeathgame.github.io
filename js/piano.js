@@ -3,6 +3,7 @@ var myGamePiece;
 var myObstacles = [];
 var myScore;
 var mySound;
+var pklc,pkld,pkle,pklf,pklg,pkla,pklb,pkhc,pkhd,pkhe,pkhf,pkhg,pkha,pkhb,pklc,pkldf,pklef,pklgf,pklaf,pklbf,pkhdf,pkhef,pkhgf,pkhaf,pkhbf,npklc,npkld,npkle,npklf,npklg,npkla,npklb,npkhc,npkhd,npkhe,npkhf,npkhg,npkha,npkhb,npklc,npkldf,npklef,npklgf,npklaf,npklbf,npkhdf,npkhef,npkhgf,npkhaf,npkhbf
 function startGame() {
     myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90
 , "image");
@@ -64,105 +65,14 @@ function component(width, height, color, x, y, type) {
         	ctx.fillRect(this.x, this.y, this.width, this.height);
         }
       }
-    this.newPos = function() {
-    	this.sp += 0.005
-    	if (this.gravitySpeed < 0){
-    		this.gravitySpeed += this.gravity * 5;
-    	}
-        
-    	else {
-        	this.gravitySpeed += this.gravity * 2;
-        }
-        this.x += this.speedX;
-        this.y += this.speedY + this.gravitySpeed;
-        this.hitBottom();
-    }
+
     
-    this.hitBottom = function() {
-        var rockbottom = myGameArea.canvas.height - this.height;
-        
-        if (this.y > rockbottom) {
-            this.y = rockbottom;
-            
-        }
-    }
     
-    this.crashWith = function(otherobj) {
-        var myleft = this.x;
-        var myright = this.x + (this.width);
-        var mytop = this.y;
-        var mybottom = this.y + (this.height);
-        var otherleft = otherobj.x;
-        var otherright = otherobj.x + (otherobj.width);
-        var othertop = otherobj.y;
-        var otherbottom = otherobj.y + (otherobj.height);
-        var crash = true;
-        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
-            crash = false;
-        }
-        return crash;
-    }
 }
 
 function updateGameArea() {
     var x, y, z, score, ranfact
-    var ranfactnum = Math.floor((Math.random())* 5)+1;
-    if (ranfactnum == 1){
-        ranfact = "Did you know that over 5000 westerners a year travel to North Korea?"
-    }
-    else if (ranfactnum == 2) {
-	ranfact = "Did you know that Kim Il-Sung was handpicked by Russian oficials to rule North Korea?"   
-    }
-    else if (ranfactnum == 3) {
-	ranfact = "Did you know that Kim Jong-Un is a basketball fanatic?"
-    }
-    else if (ranfactnum == 4) {
-	ranfact = "Did you know that the DPRK is celebrating its 70th anniversary"   
-    }
-    else {
-	ranfact = "Did you know that Kim Jong-Un went to school in Switzerland?"
-    }
-    myGameArea.frameNo += 1;
-    score = (myGameArea.frameNo / 45);
-    score = Math.ceil(score);
-    for (i = 0; i < myObstacles.length; i += 1) {
-        if (myGamePiece.crashWith(myObstacles[i])) {
-            myGameArea.stop();
-	    myGameArea.clear();
-	    alert("You died! Your score was " + score +". " + ranfact);
-	    startGame();
-            return;
-        } 
-    }
-    
     myGameArea.clear();
-    
-    z = 65;
-    if (myGameArea.frameNo == 1 || everyinterval(z)) {
-		var rannum = Math.floor((Math.random())* 10)+1;
-        	x = myGameArea.canvas.width;
-		if (rannum <= 5) {
-        	    //y = myGameArea.canvas.height - 105;
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 310, "image"));
-
-		}
-		else if (rannum >= 6 && rannum <= 7 ){
-		    //y = myGameArea.canvas.height - 145;
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
-
-		}
-	        else if (rannum == 8 || rannum == 9 || rannum == 10) {
-		    //y = myGameArea.canvas.height - 145;
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 220, "image"));
-
-		}
-	        else {
-		}
-    }
-    
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += - 25;
         myObstacles[i].update();
@@ -184,9 +94,6 @@ function updateGameArea() {
     //myHighScore.update();
     myGamePiece.newPos();    
     myGamePiece.update();
-}
-function restart() {
-    window.location.reload();
 }
 /*function sound(src) {
     this.sound = document.createElement("audio");
@@ -253,35 +160,35 @@ function checkKey(e) {
     if (e.keyCode == '220') {
       alert("highb")
     }
-    if (e.keyCode == '81') {
-      
+    if (e.keyCode == '49') {
+      alert("lowdflat")
     }
-    if (e.keyCode == '83') {
-      
+    if (e.keyCode == '50') {
+      alert("loweflat")
     }
-    if (e.keyCode == '81') {
-      
+    if (e.keyCode == '52') {
+      alert("lowgflat")
     }
-    if (e.keyCode == '83') {
-      
+    if (e.keyCode == '53') {
+      alert("lowaflat")
     }
-    if (e.keyCode == '81') {
-      
+    if (e.keyCode == '54') {
+      alert("lowbflat")
     }
-    if (e.keyCode == '83') {
-      
+    if (e.keyCode == '56') {
+      alert("highdflat")
     }
-    if (e.keyCode == '81') {
-      
+    if (e.keyCode == '57') {
+      alert("higheflat")
     }
-    if (e.keyCode == '83') {
-      
+    if (e.keyCode == '189') {
+      alert("highgflat")
     }
-    if (e.keyCode == '81') {
-      
+    if (e.keyCode == '187') {
+      alert("highaflat")
     }
-    if (e.keyCode == '83') {
-      
+    if (e.keyCode == '8') {
+      alert("highbflat")
     }
 }
 function hype() {

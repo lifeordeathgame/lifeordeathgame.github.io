@@ -3,5 +3,23 @@
 <head>
 </head>
 <body>
+<script>
+  var a = 1;
+  while (a < 100) {
+    if (a % 3 !== 0 && a % 5 !== 0) {
+        document.getElementById("demo").innerHTML = a;
+    }
+    else if (a % 3 === 0 && a % 5 !== 0) {
+        document.getElementById("demo").innerHTML = "fizz";
+    }
+    else if (a % 3 !== 0 && a % 5 === 0) {
+        document.getElementById("demo").innerHTML = "buzz";
+    }
+    else if (a % 3 === 0 && a % 5 === 0) {
+        document.getElementById("demo").innerHTML = "fizzbuzz";
+    }
+    a += 1;
+  }
+</script>
 </body>
 </html>

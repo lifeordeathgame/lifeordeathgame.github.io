@@ -3,6 +3,11 @@ var myGamePiece;
 var myObstacles = [];
 var myScore;
 var mySound;
+var a = 4;
+var b = 5;
+var c = 7;
+var d = 8;
+var e = 10;
 function startGame() {
     myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90
 , "image");
@@ -141,23 +146,23 @@ function updateGameArea() {
     if (myGameArea.frameNo == 1 || everyinterval(z)) {
 		var rannum = Math.floor((Math.random())* 10)+1;
         	x = myGameArea.canvas.width;
-		if (rannum <= 5) {
+		if (rannum <= a) {
         	    //y = myGameArea.canvas.height - 105;
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 310, "image"));
-
+		    // a -= 2 b -= 2 c-- d-- 
 		}
-		else if (rannum >= 6 && rannum <= 7 ){
+		else if (rannum >= b && rannum <= c ){
 		    //y = myGameArea.canvas.height - 145;
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
-
+		    // a++ b++ c-- d--
 		}
-	        else if (rannum == 8 || rannum == 9 || rannum == 10) {
+	        else if (rannum >= d && rannum <= e) {
 		    //y = myGameArea.canvas.height - 145;
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 220, "image"));
-
+		    // a++ b++ c += 2 
 		}
 	        else {
 		}

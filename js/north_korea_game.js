@@ -150,19 +150,28 @@ function updateGameArea() {
         	    //y = myGameArea.canvas.height - 105;
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 310, "image"));
-		    // a -= 2 b -= 2 c-- d-- 
+		    a -= 2;
+		    b -= 2; 
+			c--; 
+			d--; 
 		}
 		else if (rannum >= b && rannum <= c ){
 		    //y = myGameArea.canvas.height - 145;
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
-		    // a++ b++ c-- d--
+		    a++;
+			b++; 
+			c--; 
+			d--;
 		}
 	        else if (rannum >= d && rannum <= e) {
 		    //y = myGameArea.canvas.height - 145;
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 220, "image"));
-		    // a++ b++ c += 2 
+		    a++; 
+			b++; 
+			c += 2;
+			d += 2;
 		}
 	        else {
 		}

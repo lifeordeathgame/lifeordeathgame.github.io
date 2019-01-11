@@ -3,11 +3,11 @@ var myGamePiece;
 var myObstacles = [];
 var myScore;
 var mySound;
-var a = 4;
-var b = 5;
-var c = 7;
-var d = 8;
-var e = 10;
+var a = 40;
+var b = 41;
+var c = 70;
+var d = 71;
+var e = 100;
 function startGame() {
     myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90
 , "image");
@@ -144,34 +144,34 @@ function updateGameArea() {
     
     z = 65;
     if (myGameArea.frameNo == 1 || everyinterval(z)) {
-		var rannum = Math.floor((Math.random())* 10)+1;
+		var rannum = Math.floor((Math.random())* 100)+1;
         	x = myGameArea.canvas.width;
 		if (rannum <= a) {
-        	    //y = myGameArea.canvas.height - 105;
+        	//normal jump
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 310, "image"));
-		    a -= 2;
-		    b -= 2; 
-			c--; 
-			d--; 
+		    a -= 25;
+		    b -= 25; 
+		    c -= 15; 
+			d -= 15; 
 		}
 		else if (rannum >= b && rannum <= c ){
-		    //y = myGameArea.canvas.height - 145;
+		    //crouch jump
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
-		    a++;
-			b++; 
-			c--; 
-			d--;
+		    a += 15;
+			b += 15; 
+			c -= 15; 
+			d -= 15;
 		}
 	        else if (rannum >= d && rannum <= e) {
-		    //y = myGameArea.canvas.height - 145;
+		    //duck
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
 		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 220, "image"));
-		    a++; 
-			b++; 
-			c += 2;
-			d += 2;
+		    a += 15; 
+			b += 15; 
+			c += 25;
+			d += 25;
 		}
 	        else {
 		}

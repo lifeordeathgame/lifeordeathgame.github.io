@@ -9,7 +9,7 @@ var c = 70;
 var d = 71;
 var e = 100;
 function startGame() {
-    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png", 90, window.innerHeight - 90
+    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/commons/4/42/Animated-Flag-USA.gif", 90, window.innerHeight - 90
 , "image");
     myScore = new component("30px", "Consolas", "Red", 50, 50, "text");
     //myHighScore = new component("100px", "Consolas", "Black", window.innerWidth / 2 - 100, window.innerHeight / 2 - 100, "text");

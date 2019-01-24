@@ -353,7 +353,6 @@ function updateGameArea() {
     }
     
     /*var highscore = localStorage.getItem("highscore");
-
     if(highscore !== null){
         if (score > highscore) {
             localStorage.setItem("highscore", score);      
@@ -465,7 +464,6 @@ function clearmove() {
     }
     
     /*var highscore = localStorage.getItem("highscore");
-
     if(highscore !== null){
         if (score > highscore) {
             localStorage.setItem("highscore", score);      
@@ -559,5 +557,3 @@ function clearmove() {
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
 }
-
-

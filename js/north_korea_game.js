@@ -1,24 +1,24 @@
 alert("Press space, w, or up arrow to jump, and s, shift, or down arrow to crouch.")
-var myGamePiece;
-var myObstacles = [];
-var myScore;
-var mySound;
+var murica;
+var kimHeads = [];
+var score;
+var sound;
 var a = 40;
 var b = 41;
 var c = 70;
 var d = 71;
 var e = 100;
 function startGame() {
-    myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/commons/4/42/Animated-Flag-USA.gif", 90, window.innerHeight - 90
+    murica = new component(180, 90, "https://upload.wikimedia.org/wikipedia/commons/4/42/Animated-Flag-USA.gif", 90, window.innerHeight - 90
 , "image");
-    myScore = new component("30px", "Consolas", "Red", 50, 50, "text");
+    score = new component("30px", "Consolas", "Red", 50, 50, "text");
     //myHighScore = new component("100px", "Consolas", "Black", window.innerWidth / 2 - 100, window.innerHeight / 2 - 100, "text");
     //mySound = new sound("http://northkoreaworld.com/Vivian and Nathan Duet.mp3");
-    myObstacles = [];
-    myGameArea.start();
+    kimHeads = [];
+    gameField.start();
 }
 
-var myGameArea = {
+var gameField = {
     canvas : document.createElement("canvas"),
     start : function() {
         this.canvas.width = window.innerWidth;
@@ -52,7 +52,7 @@ function component(width, height, color, x, y, type) {
     this.sp = 16;
     this.jumpokay = false;
     this.update = function() {
-        ctx = myGameArea.context;
+        ctx = gameField.context;
         if (this.type == "text") {
       		ctx.font = this.width + " " + this.height;
       		ctx.fillStyle = color;
@@ -84,7 +84,7 @@ function component(width, height, color, x, y, type) {
     }
     
     this.hitBottom = function() {
-        var rockbottom = myGameArea.canvas.height - this.height;
+        var rockbottom = gameField.canvas.height - this.height;
         
         if (this.y > rockbottom) {
             this.y = rockbottom;
@@ -127,29 +127,29 @@ function updateGameArea() {
     else {
 	ranfact = "Did you know that Kim Jong-Un went to school in Switzerland?"
     }
-    myGameArea.frameNo += 1;
-    score = (myGameArea.frameNo / 45);
+    gameField.frameNo += 1;
+    score = (gameField.frameNo / 45);
     score = Math.ceil(score);
-    for (i = 0; i < myObstacles.length; i += 1) {
-        if (myGamePiece.crashWith(myObstacles[i])) {
-            myGameArea.stop();
-	    myGameArea.clear();
+    for (i = 0; i < kimHeads.length; i += 1) {
+        if (murica.crashWith(kimHeads[i])) {
+            gameField.stop();
+	    gameField.clear();
 	    alert("You died! Your score was " + score +". " + ranfact);
 	    startGame();
             return;
         } 
     }
     
-    myGameArea.clear();
+    gameField.clear();
     
     z = 65;
-    if (myGameArea.frameNo == 1 || everyinterval(z)) {
+    if (gameField.frameNo == 1 || everyinterval(z)) {
 		var rannum = Math.floor((Math.random())* 100)+1;
-        	x = myGameArea.canvas.width;
+        	x = gameField.canvas.width;
 		if (rannum <= a) {
         	//normal jump
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 310, "image"));
+		    kimHeads.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, gameField.canvas.height - 75, "image"));
+		    kimHeads.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, gameField.canvas.height - 310, "image"));
 		    a -= 25;
 		    b -= 25; 
 		    c -= 15; 
@@ -157,8 +157,8 @@ function updateGameArea() {
 		}
 		else if (rannum >= b && rannum <= c ){
 		    //crouch jump
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
+		    kimHeads.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, gameField.canvas.height - 145, "image"));
+		    kimHeads.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, gameField.canvas.height - 75, "image"));
 		    a += 15;
 			b += 15; 
 			c -= 15; 
@@ -166,8 +166,8 @@ function updateGameArea() {
 		}
 	        else if (rannum >= d && rannum <= e) {
 		    //duck
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 220, "image"));
+		    kimHeads.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, gameField.canvas.height - 145, "image"));
+		    kimHeads.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, gameField.canvas.height - 220, "image"));
 		    a += 15; 
 			b += 15; 
 			c += 25;
@@ -177,9 +177,9 @@ function updateGameArea() {
 		}
     }
     
-    for (i = 0; i < myObstacles.length; i += 1) {
-        myObstacles[i].x += - 25;
-        myObstacles[i].update();
+    for (i = 0; i < kimHeads.length; i += 1) {
+        kimHeads[i].x += - 25;
+        kimHeads[i].update();
     }
     
     /*var highscore = localStorage.getItem("highscore");
@@ -191,12 +191,12 @@ function updateGameArea() {
     else {
         localStorage.setItem("highscore", score);
     }*/
-    myScore.text="SCORE: " + score;
+    score.text="SCORE: " + score;
     //myHighScore.text = "HIGH SCORE: " + highscore;	
-    myScore.update();
+    score.update();
     //myHighScore.update();
-    myGamePiece.newPos();    
-    myGamePiece.update();
+    murica.newPos();    
+    murica.update();
 }
 function restart() {
     window.location.reload();
@@ -225,13 +225,13 @@ function checkKey(e) {
     e = e || window.event;
 
     if (e.keyCode == '32' || e.keyCode == '87' || e.keyCode == '38') {
-    	if (myGamePiece.y >= myGameArea.canvas.height - 90) {
+    	if (murica.y >= gameField.canvas.height - 90) {
     	    accelerate(-12)
             clearmove()
         }
     }
     if (e.keyCode == '83' || e.keyCode == '16' || e.keyCode == '40') {
-        myGamePiece.height = 60;
+        murica.height = 60;
 	
     }
 }
@@ -241,7 +241,7 @@ function doneKey(e) {
     e = e || window.event;
 
     if (e.keyCode == '83' || e.keyCode == '16' || e.keyCode == '40') {
-        myGamePiece.height = 90;
+        murica.height = 90;
 
     }
 }
@@ -250,29 +250,29 @@ function hype() {
     mySound.play();
 }
 function everyinterval(n) {
-    if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
+    if ((gameField.frameNo / n) % 1 == 0) {return true;}
     return false;
 }
 function accelerate(n) {
-	myGamePiece.gravitySpeed = n;
+	murica.gravitySpeed = n;
 }
 function moveup() {
-    myGamePiece.speedY = -1; 
+    murica.speedY = -1; 
 }
 
 function movedown() {
-    myGamePiece.speedY = 1; 
+    murica.speedY = 1; 
 }
 
 function moveleft() {
-    myGamePiece.speedX = -1; 
+    murica.speedX = -1; 
 }
 
 function moveright() {
-    myGamePiece.speedX = 1; 
+    murica.speedX = 1; 
 }
 
 function clearmove() {
-    myGamePiece.speedX = 0; 
-    myGamePiece.speedY = 0; 
+    murica.speedX = 0; 
+    murica.speedY = 0; 
 }

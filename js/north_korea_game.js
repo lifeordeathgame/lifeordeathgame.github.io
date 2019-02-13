@@ -1,7 +1,7 @@
 alert("Press space, w, or up arrow to jump, and s, shift, or down arrow to crouch.")
 var murica;
 var kimHeads = [];
-var myScore;
+var score;
 var sound;
 var a = 40;
 var b = 41;
@@ -11,8 +11,8 @@ var e = 100;
 function startGame() {
     murica = new component(180, 90, "https://upload.wikimedia.org/wikipedia/commons/4/42/Animated-Flag-USA.gif", 90, window.innerHeight - 90
 , "image");
-    myScore = new component("30px", "Consolas", "Red", 50, 50, "text");
-    //myHighMyScore = new component("100px", "Consolas", "Black", window.innerWidth / 2 - 100, window.innerHeight / 2 - 100, "text");
+    score = new component("30px", "Consolas", "Red", 50, 50, "text");
+    //myHighScore = new component("100px", "Consolas", "Black", window.innerWidth / 2 - 100, window.innerHeight / 2 - 100, "text");
     //mySound = new sound("http://northkoreaworld.com/Vivian and Nathan Duet.mp3");
     kimHeads = [];
     gameField.start();
@@ -110,7 +110,7 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
-    var x, y, z, myScore, ranfact
+    var x, y, z, score, ranfact
     var ranfactnum = Math.floor((Math.random())* 5)+1;
     if (ranfactnum == 1){
         ranfact = "Did you know that over 5000 westerners a year travel to North Korea?"
@@ -128,13 +128,13 @@ function updateGameArea() {
 	ranfact = "Did you know that Kim Jong-Un went to school in Switzerland?"
     }
     gameField.frameNo += 1;
-    myScore = (gameField.frameNo / 45);
-    myScore = Math.ceil(myScore);
+    score = (gameField.frameNo / 45);
+    score = Math.ceil(score);
     for (i = 0; i < kimHeads.length; i += 1) {
         if (murica.crashWith(kimHeads[i])) {
             gameField.stop();
 	    gameField.clear();
-	    alert("You died! Your myScore was " + myScore +". " + ranfact);
+	    alert("You died! Your score was " + score +". " + ranfact);
 	    startGame();
             return;
         } 
@@ -182,19 +182,19 @@ function updateGameArea() {
         kimHeads[i].update();
     }
     
-    /*var highmyScore = localStorage.getItem("highmyScore");
-    if(highmyScore !== null){
-        if (myScore > highmyScore) {
-            localStorage.setItem("highmyScore", myScore);      
+    /*var highscore = localStorage.getItem("highscore");
+    if(highscore !== null){
+        if (score > highscore) {
+            localStorage.setItem("highscore", score);      
         }
     }
     else {
-        localStorage.setItem("highmyScore", myScore);
+        localStorage.setItem("highscore", score);
     }*/
-    myScore.text="MyScore: " + myScore;
-    //myHighMyScore.text = "HIGH MyScore: " + highmyScore;	
-    myScore.update();
-    //myHighMyScore.update();
+    score.text="SCORE: " + score;
+    //myHighScore.text = "HIGH SCORE: " + highscore;	
+    score.update();
+    //myHighScore.update();
     murica.newPos();    
     murica.update();
 }

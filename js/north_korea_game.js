@@ -148,8 +148,8 @@ function updateGameArea() {
         	x = myGameArea.canvas.width;
 		if (rannum <= a) {
         	//normal jump
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 310, "image"));
+		    myObstacles.push(new component(75, 75, "lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
+		    myObstacles.push(new component(75, 75, "lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 310, "image"));
 		    a -= 25;
 		    b -= 25; 
 		    c -= 15; 
@@ -157,8 +157,8 @@ function updateGameArea() {
 		}
 		else if (rannum >= b && rannum <= c ){
 		    //crouch jump
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
+		    myObstacles.push(new component(75, 75, "lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
+		    myObstacles.push(new component(75, 75, "lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
 		    a += 15;
 			b += 15; 
 			c -= 15; 
@@ -166,8 +166,8 @@ function updateGameArea() {
 		}
 	        else if (rannum >= d && rannum <= e) {
 		    //duck
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
-		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 220, "image"));
+		    myObstacles.push(new component(75, 75, "lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
+		    myObstacles.push(new component(75, 75, "lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 220, "image"));
 		    a += 15; 
 			b += 15; 
 			c += 25;

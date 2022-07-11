@@ -8,6 +8,14 @@ var b = 41;
 var c = 70;
 var d = 71;
 var e = 100;
+
+var kimImage = new Image();
+kimImage.src = "lifeordeathgame.github.io/imgs/Kim.png";
+kimImage.onload = function () {
+	console.log("KIM");
+}
+
+
 function startGame() {
     myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/commons/4/42/Animated-Flag-USA.gif", 90, window.innerHeight - 90
 , "image");
@@ -38,8 +46,12 @@ var myGameArea = {
 function component(width, height, color, x, y, type) {
     this.width = width;
     if (type == "image") {
-    	this.image = new Image();
-    	this.image.src = color;
+	if (color == "lifeordeathgame.github.io/imgs/Kim.png") {
+		this.image = kimImage;
+	} else {
+	    	this.image = new Image();
+    		this.image.src = color;
+	}
     }
     this.height = height;
     this.speedX = 0;

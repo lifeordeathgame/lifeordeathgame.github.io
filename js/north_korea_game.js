@@ -10,7 +10,7 @@ var d = 71;
 var e = 100;
 
 var kimImage = new Image();
-kimImage.src = "lifeordeathgame.github.io/imgs/Kim.png";
+kimImage.src = "http://lifeordeathgame.github.io/imgs/Kim.png";
 kimImage.onload = function () {
 	console.log("KIM");
 }
@@ -46,7 +46,7 @@ var myGameArea = {
 function component(width, height, color, x, y, type) {
     this.width = width;
     if (type == "image") {
-	if (color == "lifeordeathgame.github.io/imgs/Kim.png") {
+	if (color == "http://lifeordeathgame.github.io/imgs/Kim.png") {
 		this.image = kimImage;
 	} else {
 	    	this.image = new Image();
@@ -160,8 +160,8 @@ function updateGameArea() {
         	x = myGameArea.canvas.width;
 		if (rannum <= a) {
         	//normal jump
-		    myObstacles.push(new component(75, 75, "lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
-		    myObstacles.push(new component(75, 75, "lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 310, "image"));
+		    myObstacles.push(new component(75, 75, "http://lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
+		    myObstacles.push(new component(75, 75, "http://lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 310, "image"));
 		    a -= 25;
 		    b -= 25; 
 		    c -= 15; 
@@ -169,8 +169,8 @@ function updateGameArea() {
 		}
 		else if (rannum >= b && rannum <= c ){
 		    //crouch jump
-		    myObstacles.push(new component(75, 75, "lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
-		    myObstacles.push(new component(75, 75, "lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
+		    myObstacles.push(new component(75, 75, "http://lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
+		    myObstacles.push(new component(75, 75, "http://lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
 		    a += 15;
 			b += 15; 
 			c -= 15; 
@@ -178,8 +178,8 @@ function updateGameArea() {
 		}
 	        else if (rannum >= d && rannum <= e) {
 		    //duck
-		    myObstacles.push(new component(75, 75, "lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
-		    myObstacles.push(new component(75, 75, "lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 220, "image"));
+		    myObstacles.push(new component(75, 75, "http://lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
+		    myObstacles.push(new component(75, 75, "http://lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 220, "image"));
 		    a += 15; 
 			b += 15; 
 			c += 25;

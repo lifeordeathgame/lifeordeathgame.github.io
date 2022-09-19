@@ -1,4 +1,15 @@
-alert("Press space, w, or up arrow to jump, and s, shift, or down arrow to crouch.")
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!-- CSS -->
+        <link rel="stylesheet" href="http://northkoreaworld.com/css/backbutton.css">
+        <link rel="stylesheet" href="http://northkoreaworld.com/css/cursor.css">
+        <link rel="stylesheet" href="http://northkoreaworld.com/css/Scoregamebtn.css">
+        <link href='https://fonts.googleapis.com/css?family=Bahiana' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+      <!-- JS -->
+        <script>
+        alert("Press space, w, or up arrow to jump, and s, shift, or down arrow to crouch.")
 var myGamePiece;
 var myObstacles = [];
 var myScore;
@@ -8,14 +19,6 @@ var b = 41;
 var c = 70;
 var d = 71;
 var e = 100;
-
-var kimImage = new Image();
-kimImage.src = "http://lifeordeathgame.github.io/imgs/Kim.png";
-kimImage.onload = function () {
-	console.log("KIM");
-}
-
-
 function startGame() {
     myGamePiece = new component(180, 90, "https://upload.wikimedia.org/wikipedia/commons/4/42/Animated-Flag-USA.gif", 90, window.innerHeight - 90
 , "image");
@@ -46,12 +49,8 @@ var myGameArea = {
 function component(width, height, color, x, y, type) {
     this.width = width;
     if (type == "image") {
-	if (color == "http://lifeordeathgame.github.io/imgs/Kim.png") {
-		this.image = kimImage;
-	} else {
-	    	this.image = new Image();
-    		this.image.src = color;
-	}
+    	this.image = new Image();
+    	this.image.src = color;
     }
     this.height = height;
     this.speedX = 0;
@@ -160,8 +159,8 @@ function updateGameArea() {
         	x = myGameArea.canvas.width;
 		if (rannum <= a) {
         	//normal jump
-		    myObstacles.push(new component(75, 75, "http://lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
-		    myObstacles.push(new component(75, 75, "http://lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 310, "image"));
+		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
+		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 310, "image"));
 		    a -= 25;
 		    b -= 25; 
 		    c -= 15; 
@@ -169,8 +168,8 @@ function updateGameArea() {
 		}
 		else if (rannum >= b && rannum <= c ){
 		    //crouch jump
-		    myObstacles.push(new component(75, 75, "http://lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
-		    myObstacles.push(new component(75, 75, "http://lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
+		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
+		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 75, "image"));
 		    a += 15;
 			b += 15; 
 			c -= 15; 
@@ -178,8 +177,8 @@ function updateGameArea() {
 		}
 	        else if (rannum >= d && rannum <= e) {
 		    //duck
-		    myObstacles.push(new component(75, 75, "http://lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
-		    myObstacles.push(new component(75, 75, "http://lifeordeathgame.github.io/imgs/Kim.png", x, myGameArea.canvas.height - 220, "image"));
+		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 145, "image"));
+		    myObstacles.push(new component(75, 75, "http://northkoreaworld.com/imgs/Kim.png", x, myGameArea.canvas.height - 220, "image"));
 		    a += 15; 
 			b += 15; 
 			c += 25;
@@ -288,3 +287,33 @@ function clearmove() {
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
 }
+
+        </script>
+      <!-- maney$$ -->
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-4795075137356037",
+            enable_page_level_ads: true
+          });
+        </script>
+      <!-- ICON -->
+        <link rel="shortcut icon" href="http://northkoreaworld.com/imgs/icon.png" type="image/x-icon" />
+      <!-- Page Name -->
+        <title>
+          DPRK Game
+        </title>
+    </head>
+    <body>
+      <a href="http://northkoreaworld.com/html/gamemenu.html" class="back">
+        Back
+      </a>
+      <a href="http://northkoreaworld.com/html/game.html" id="reg">
+        Regular
+      </a>
+      <a href="http://northkoreaworld.com/html/hypemodegame.html" id="hype">
+        HYPE
+      </a>
+    </body>
+  </html>
+
